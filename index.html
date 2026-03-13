@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Regenerative Wellness Oasis | โดยหมอวิฑูร</title>
+  <meta name="description" content="ศูนย์กลางแห่งการย้อนวัยและการซ่อมแซมสุขภาพ นาป่า ชลบุรี โดยหมอวิฑูร">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- LOADING SCREEN -->
+  <div class="loader" id="loader">
+    <div class="loader-ring" style="position:relative"></div>
+  </div>
+
+  <!-- PARTICLES -->
+  <div class="particles" id="particles"></div>
+
+  <!-- NAVIGATION -->
+  <nav id="nav">
+    <div class="nav-logo">REGENERATIVE OASIS</div>
+    <ul class="nav-links">
+      <li><a href="#vision">วิสัยทัศน์</a></li>
+      <li><a href="#business">คุณค่าทางธุรกิจ</a></li>
+      <li><a href="#zones">ผังโครงการ</a></li>
+      <li><a href="#legacy">คุณค่าทางจิตใจ</a></li>
+      <li><a href="#closing">บทสรุป</a></li>
+    </ul>
+  </nav>
+
+  <!-- ============================== HERO ============================== -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+        </svg>
+        นาป่า, ชลบุรี — Exclusive Project
+      </div>
+      <h1>
+        <span class="gradient-text">Regenerative</span><br>
+        Wellness Oasis
+      </h1>
+      <p class="hero-subtitle">
+        ศูนย์กลางแห่งการย้อนวัยและการซ่อมแซมสุขภาพ<br>
+        ที่มีความคุ้มค่าสูงสุด — โดย<strong style="color:var(--sand)">หมอวิฑูร</strong>
+      </p>
+      <div class="hero-cta">
+        <button class="btn-primary"
+          onclick="document.getElementById('vision').scrollIntoView({behavior:'smooth'})">สำรวจโครงการ</button>
+        <button class="btn-outline"
+          onclick="document.getElementById('closing').scrollIntoView({behavior:'smooth'})">บทสรุป</button>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>เลื่อนลง</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ============================== VISION ============================== -->
+  <section class="vision" id="vision">
+    <div class="section-container">
+      <div class="vision-grid">
+        <div class="vision-image reveal">
+          <img src="images/Fountain of youth.jpg" alt="Regenerative Medicine Lab">
+          <div class="vision-stat">
+            <div class="number">10x</div>
+            <div class="label">Margin สูงกว่าโมเดลเดิม</div>
+          </div>
+        </div>
+        <div>
+          <div class="section-label reveal">วิสัยทัศน์</div>
+          <h2 class="section-title reveal reveal-delay-1">
+            ไม่ใช่แค่โรงพยาบาล<br>
+            แต่คือ <span style="color:var(--sage)">น้ำพุแห่งความอ่อนเยาว์</span>
+          </h2>
+          <p class="section-desc reveal reveal-delay-2">
+            โครงการนี้ไม่ใช่แค่การสร้างโรงพยาบาลหรือ Nursing Home ทั่วไป
+            แต่คือการสร้าง <strong>"ศูนย์กลางแห่งการย้อนวัยและการซ่อมแซมสุขภาพ"</strong>
+            ที่มีความคุ้มค่าสูงสุดใน 2 มิติ — คุณค่าทางธุรกิจ และคุณค่าทางจิตใจ
+          </p>
+          <div style="display:flex;gap:2rem;flex-wrap:wrap" class="reveal reveal-delay-3">
+            <div>
+              <div style="font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:800;color:var(--sage)">2
+              </div>
+              <div style="font-size:0.85rem;color:var(--text-muted)">มิติแห่งคุณค่า</div>
+            </div>
+            <div>
+              <div style="font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:800;color:var(--sand)">∞
+              </div>
+              <div style="font-size:0.85rem;color:var(--text-muted)">มรดกที่ยั่งยืน</div>
+            </div>
+            <div>
+              <div style="font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:800;color:var(--cream)">#1
+              </div>
+              <div style="font-size:0.85rem;color:var(--text-muted)">ในนาป่า ชลบุรี</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== BUSINESS VALUE ============================== -->
+  <section id="business" style="background:linear-gradient(180deg,#1D1F19 0%,var(--bg-dark) 100%)">
+    <div class="section-container">
+      <div class="section-label reveal">มิติที่ 1</div>
+      <h2 class="section-title reveal reveal-delay-1">คุณค่าทางธุรกิจ: การลงทุนที่ <span
+          style="color:var(--sage)">"ไร้คู่แข่ง"</span></h2>
+      <p class="section-desc reveal reveal-delay-2">The Regenerative Profit — ตอบโจทย์ Mega Trend
+        ของโลกที่มีความเสี่ยงต่ำแต่กำไรสูง</p>
+
+      <div class="card-grid">
+        <!-- Card 1 -->
+        <div class="card reveal">
+          <div class="card-icon">🧬</div>
+          <h3>เหนือกว่าการรักษา คือการ 'ฟื้นฟู'</h3>
+          <p>ในยุคนี้คนไม่ได้ต้องการแค่ยาเพื่อประคองอาการ แต่คนที่มีกำลังซื้อสูงต้องการการ "ซ่อมแซมเซลล์"
+            ให้กลับไปเป็นหนุ่มสาวอีกครั้ง</p>
+          <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.05)">
+            <span style="font-size:0.8rem;color:var(--sage);font-weight:600">VALUE-BASED PRICING</span>
+            <p style="font-size:0.85rem;margin-top:0.3rem">กำไร (Margin) สูงกว่าโมเดลโรงพยาบาลแบบเดิมหลายเท่าตัว</p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card reveal reveal-delay-1">
+          <div class="card-icon">📍</div>
+          <h3>ทำเลทองของ "สังคมสูงวัยเกรดพรีเมียม"</h3>
+          <p>ที่ดินนาป่า ชลบุรี ตั้งอยู่ท่ามกลางเจ้าของธุรกิจและผู้บริหารระดับสูง —
+            กลุ่มคนที่มีกำลังจ่ายมหาศาลเพื่อแลกกับ "เวลา" และ "สุขภาพ" ที่ดีขึ้น</p>
+          <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.05)">
+            <span style="font-size:0.8rem;color:var(--sage);font-weight:600">PREMIUM LOCATION</span>
+            <p style="font-size:0.85rem;margin-top:0.3rem">ตอบโจทย์กลุ่มเป้าหมายที่มีกำลังซื้อสูงสุด</p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card reveal reveal-delay-2">
+          <div class="card-icon">💰</div>
+          <h3>ความยั่งยืนของรายได้</h3>
+          <p>โมเดลการดูแลระยะยาว (Nursing Home) ที่เน้นการฟื้นฟูให้กลับมาเดินได้ (Intermediate Care)
+            จะสร้างกระแสเงินสดที่มั่นคงและยาวนาน</p>
+          <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.05)">
+            <span style="font-size:0.8rem;color:var(--sage);font-weight:600">RECURRING REVENUE</span>
+            <p style="font-size:0.85rem;margin-top:0.3rem">ต่างจากคลินิกทั่วไปที่คนไข้มาเพียงครั้งคราว</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== LEGACY / SOUL ============================== -->
+  <section class="legacy-section" id="legacy">
+    <div class="section-container">
+      <div class="legacy-grid">
+        <div class="legacy-content">
+          <div class="section-label reveal">มิติที่ 2</div>
+          <h2 class="section-title reveal reveal-delay-1">คุณค่าทางจิตใจ: <span
+              style="color:var(--sage)">มรดกที่มีชีวิต</span></h2>
+          <p class="section-desc reveal reveal-delay-2">The Soul &amp; Legacy —
+            การสร้างอนุสรณ์สถานแห่งความดีงามที่จะคงอยู่คู่กับชื่อของหมอวิฑูรตลอดไป</p>
+
+          <ul class="legacy-points reveal reveal-delay-3">
+            <li>
+              <div class="legacy-check">✦</div>
+              <div>
+                <h4>"คำตอบ" ของช่วงชีวิต</h4>
+                <p>พื้นที่ที่คุณหมอจะได้ใช้ทั้ง "ความรู้" และ "เทคโนโลยีที่ดีที่สุด" ในการดูแลตัวเองและเพื่อนฝูง
+                  เป็นทั้ง "ผู้สร้าง" และ "ผู้ได้รับประโยชน์" อย่างแท้จริง</p>
+              </div>
+            </li>
+            <li>
+              <div class="legacy-check">✦</div>
+              <div>
+                <h4>การสร้างมรดก (Legacy)</h4>
+                <p>การช่วยให้ผู้สูงอายุกลับมาเดินได้ หรือช่วยให้คนเป็นเบาหวานเรื้อรังกลับมาใช้ชีวิตได้ปกติ
+                  คือการทำบุญและสร้างกุศลที่ยิ่งใหญ่ที่สุด</p>
+              </div>
+            </li>
+            <li>
+              <div class="legacy-check">✦</div>
+              <div>
+                <h4>ความสุขในทุกเช้า</h4>
+                <p>การได้เห็นคนไข้เดินยิ้มในสวนป่า (Urban Forest) ที่คุณหมอสร้างขึ้น
+                  คือความอิ่มใจที่เงินจำนวนมากก็ซื้อไม่ได้</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="legacy-image-wrap reveal">
+          <img src="images/Living Legacy.jpg" alt="สวนป่า Urban Forest เพื่อการฟื้นฟู">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== MASTERPLAN ============================== -->
+  <section class="masterplan" id="zones">
+    <div class="section-container">
+      <div class="section-label reveal" style="justify-content:center">ผังโครงการ</div>
+      <h2 class="section-title reveal reveal-delay-1" style="text-align:center;max-width:700px;margin:0 auto 1rem">
+        3 โซนแห่งการ<span style="color:var(--sage)">ฟื้นฟูชีวิต</span>
+      </h2>
+      <p class="section-desc reveal reveal-delay-2" style="text-align:center;max-width:600px;margin:0 auto 2rem">
+        ออกแบบอย่างเป็นระบบจากหน้าโครงการสู่ด้านในสุด — จากการต้อนรับ สู่การรักษา สู่การพักฟื้น
+      </p>
+      <div class="masterplan-image reveal reveal-delay-3">
+        <img src="images/plan.jpg" alt="Masterplan Regenerative Wellness Oasis">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== ZONE 1 ============================== -->
+  <div class="zone-section">
+    <div class="zone-hero reveal">
+      <img src="images/Zone 1.jpg" alt="Zone 1 — Welcome &amp; Community">
+      <div class="zone-hero-overlay">
+        <div class="zone-number z1">1</div>
+        <h2 class="zone-hero-title">Welcome &amp; <span style="color:var(--sand)">Community</span></h2>
+        <p class="zone-hero-tagline">"ประตูสู่สุขภาพและสังคม" — เน้นการดึงคนเข้าพื้นที่และสร้างรายได้หมุนเวียนรายวัน</p>
+      </div>
+    </div>
+    <div class="zone-features">
+      <div class="zone-card reveal">
+        <div class="zone-card-icon z1">☕</div>
+        <h3>Healthy Cafe &amp; Restaurant</h3>
+        <p>ร้านอาหารแนว Low-carb และเครื่องดื่มเพื่อสุขภาพ ออกแบบสไตล์ Glass House</p>
+      </div>
+      <div class="zone-card reveal reveal-delay-1">
+        <div class="zone-card-icon z1">🌿</div>
+        <h3>Organic Market</h3>
+        <p>ตลาดสินค้าเกษตรอินทรีย์และแปลงผักสาธิต เพื่อให้คนไข้และคนในชุมชนมีแหล่งวัตถุดิบที่ดี</p>
+      </div>
+      <div class="zone-card reveal reveal-delay-2">
+        <div class="zone-card-icon z1">📱</div>
+        <h3>Lobby &amp; Fitkub Tech Bar</h3>
+        <p>พื้นที่ต้อนรับและจุดลงทะเบียน พร้อมแนะนำการใช้แอปพลิเคชันติดตามสุขภาพ</p>
+      </div>
+    </div>
+    <div class="zone-divider"></div>
+  </div>
+
+  <!-- ============================== ZONE 2 ============================== -->
+  <div class="zone-section">
+    <div class="zone-hero reveal">
+      <img src="images/Zone 2.jpg" alt="Zone 2 — Regenerative &amp; Metabolic Center">
+      <div class="zone-hero-overlay">
+        <div class="zone-number z2">2</div>
+        <h2 class="zone-hero-title">Regenerative &amp; <span style="color:var(--sage)">Metabolic Center</span></h2>
+        <p class="zone-hero-tagline">"หัวใจแห่งการรักษา" — พื้นที่บำบัดเชิงลึกด้วยเทคโนโลยีทางการแพทย์ที่ทันสมัยที่สุด
+        </p>
+      </div>
+    </div>
+    <div class="zone-features">
+      <div class="zone-card reveal">
+        <div class="zone-card-icon z2">📊</div>
+        <h3>Metabolic Health Clinic</h3>
+        <p>ศูนย์จัดการโรคเรื้อรัง (NCDs) เน้นเบาหวานย้อนกลับด้วย CGM (Continuous Glucose Monitor)</p>
+      </div>
+      <div class="zone-card reveal reveal-delay-1">
+        <div class="zone-card-icon z2">🧬</div>
+        <h3>Regenerative Medicine Unit</h3>
+        <p>ห้องให้การบำบัดระดับเซลล์ — IV Therapy, Hormone Replacement, Cell-based Therapy</p>
+      </div>
+      <div class="zone-card reveal reveal-delay-2">
+        <div class="zone-card-icon z2">💧</div>
+        <h3>Medical Spa &amp; Hydrotherapy</h3>
+        <p>สระวารีบำบัดระบบเกลือและห้องสปาเพื่อการผ่อนคลายกล้ามเนื้อ</p>
+      </div>
+      <div class="zone-card reveal reveal-delay-3">
+        <div class="zone-card-icon z2">🔬</div>
+        <h3>Diagnostic Center</h3>
+        <p>ห้องตรวจแล็บและวิเคราะห์องค์ประกอบร่างกายเชิงลึก</p>
+      </div>
+      <div class="zone-card reveal reveal-delay-3">
+        <div class="zone-card-icon z2">🏋️</div>
+        <h3>Physical Therapy Clinic</h3>
+        <p>คลินิกกายภาพบำบัดครบวงจร เพื่อฟื้นฟูการเคลื่อนไหวและเสริมสร้างสมรรถภาพร่างกายอย่างเป็นระบบ</p>
+      </div>
+    </div>
+    <div class="zone-divider"></div>
+  </div>
+
+  <!-- ============================== ZONE 3 ============================== -->
+  <div class="zone-section">
+    <div class="zone-hero reveal">
+      <img src="images/Zone 3.jpg" alt="Zone 3 — The Sanctuary &amp; Nursing Home">
+      <div class="zone-hero-overlay">
+        <div class="zone-number z3">3</div>
+        <h2 class="zone-hero-title">The Sanctuary &amp; <span style="color:var(--cream)">Nursing Home</span></h2>
+        <p class="zone-hero-tagline">"พื้นที่แห่งชีวิตใหม่และมรดกทางคุณค่า" —
+          พื้นที่สงบที่สุดเพื่อการพักฟื้นและดูแลระยะยาว</p>
+      </div>
+    </div>
+    <div class="zone-features">
+      <div class="zone-card reveal">
+        <div class="zone-card-icon z3">🏨</div>
+        <h3>Nursing Home Care (Premium Suites)</h3>
+        <p>ห้องพักผู้สูงอายุระดับหรู ออกแบบตามหลัก Universal Design พร้อมระบบ Smart Room Monitoring</p>
+      </div>
+      <div class="zone-card reveal reveal-delay-1">
+        <div class="zone-card-icon z3">🏥</div>
+        <h3>Intermediate Care Center</h3>
+        <p>อาคารฟื้นฟูสมรรถภาพสำหรับผู้ป่วยพักฟื้นหลังผ่าตัด หรือผู้ป่วยทำกายภาพบำบัดอย่างเข้มข้น</p>
+      </div>
+      <div class="zone-card reveal reveal-delay-2">
+        <div class="zone-card-icon z3">🌳</div>
+        <h3>Regenerative Garden (Urban Forest)</h3>
+        <p>สวนป่าบำบัดที่มีทางเดินจงกรม ทางเดินนวดเท้า และพื้นที่โยคะท่ามกลางธรรมชาติ</p>
+      </div>
+      <div class="zone-card reveal reveal-delay-3">
+        <div class="zone-card-icon z3">🛡️</div>
+        <h3>24/7 Nursing Station</h3>
+        <p>ศูนย์อำนวยการพยาบาลวิชาชีพที่ดูแลความปลอดภัยตลอด 24 ชั่วโมง</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================== CLOSING PITCH ============================== -->
+  <section class="closing" id="closing">
+    <div class="section-container">
+      <div class="section-label reveal" style="justify-content:center">บทสรุปเพื่อการนำเสนอ</div>
+      <h2 class="section-title reveal reveal-delay-1" style="text-align:center">
+        <span style="color:var(--sage)">Closing Pitch</span>
+      </h2>
+
+      <div class="closing-quote reveal reveal-delay-2">
+        คุณหมอวิฑูรครับ โครงการนี้คือการนำ Regenerative Medicine มาเปลี่ยนที่ดินว่างเปล่าให้กลายเป็น <strong
+          style="color:var(--sage)">'น้ำพุแห่งความอ่อนเยาว์'</strong> ของนาป่า
+        <br><br>
+        ในเชิงธุรกิจ มันคือการลงทุนที่ตอบโจทย์ Mega Trend ของโลกที่มีความเสี่ยงต่ำแต่กำไรสูง แต่ในเชิงความรู้สึก
+        มันคือการที่คุณหมอจะได้สร้าง <strong style="color:var(--sage)">'สวรรค์บนดิน'</strong>
+        เพื่อดูแลผู้คนและดูแลตัวเราเองไปพร้อมๆ กัน
+        <br><br>
+        ผมพร้อมจะเป็นผู้ขับเคลื่อนทุกรายละเอียด เพื่อให้ชื่อของคุณหมอวิฑูรเป็นสัญลักษณ์แห่งการมอบ <strong
+          style="color:var(--sand)">ชีวิตใหม่ (New Life)</strong> ให้กับทุกคนครับ
+      </div>
+
+      <div class="reveal reveal-delay-3" style="margin-top:3rem">
+        <button class="btn-primary" style="font-size:1.1rem;padding:1.2rem 3rem"
+          onclick="window.scrollTo({top:0,behavior:'smooth'})">
+          ✦ กลับสู่จุดเริ่มต้น
+        </button>
+      </div>
+      <div class="signature reveal">— ด้วยความเคารพอย่างสูง —</div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Regenerative Wellness Oasis — Napa, Chonburi | Confidential Presentation</p>
+  </footer>
+
+  <script>
+    // Loader
+    window.addEventListener('load', () => {
+      setTimeout(() => document.getElementById('loader').classList.add('hidden'), 800);
+    });
+
+    // Nav scroll effect
+    window.addEventListener('scroll', () => {
+      document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Scroll reveal
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('active'); observer.unobserve(e.target); } });
+    }, { threshold: 0.15 });
+    revealEls.forEach(el => observer.observe(el));
+
+    // Particles
+    (function createParticles() {
+      const container = document.getElementById('particles');
+      for (let i = 0; i < 30; i++) {
+        const p = document.createElement('div');
+        p.className = 'particle';
+        p.style.left = Math.random() * 100 + '%';
+        p.style.animationDuration = (8 + Math.random() * 12) + 's';
+        p.style.animationDelay = Math.random() * 10 + 's';
+        p.style.width = p.style.height = (2 + Math.random() * 3) + 'px';
+        container.appendChild(p);
+      }
+    })();
+  </script>
+</body>
+
+</html>
