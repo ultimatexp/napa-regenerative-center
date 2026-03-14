@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Business Plan | Regenerative Wellness Oasis — นาป่า, ชลบุรี</title>
+    <meta name="description"
+        content="แผนธุรกิจ Regenerative Wellness Oasis — คลินิกสุขภาพเชิงบูรณาการ นาป่า ชลบุรี EEC Zone">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="business-plan.css">
+</head>
+
+<body>
+    <div class="loader" id="loader">
+        <div class="loader-ring"></div>
+    </div>
+    <div class="particles" id="particles"></div>
+
+    <nav id="nav">
+        <a href="index.html" class="nav-logo">REGENERATIVE OASIS</a>
+        <ul class="nav-links">
+            <li><a href="#market">ตลาด</a></li>
+            <li><a href="#operations">Operations</a></li>
+            <li><a href="#financial">การเงิน</a></li>
+            <li><a href="#risks">ความเสี่ยง</a></li>
+            <li><a href="feasibility.html">📊 Feasibility</a></li>
+            <li><a href="index.html">← หน้าหลัก</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" style="min-height:85vh">
+        <div class="hero-content">
+            <div class="hero-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                    <polyline points="14 2 14 8 20 8" />
+                    <line x1="16" y1="13" x2="8" y2="13" />
+                    <line x1="16" y1="17" x2="8" y2="17" />
+                    <polyline points="10 9 9 9 8 9" />
+                </svg> Comprehensive Business Plan</div>
+            <h1><span class="gradient-text">Regenerative</span><br>Wellness Oasis</h1>
+            <p class="hero-subtitle">แผนธุรกิจฉบับสมบูรณ์ — คลินิกสุขภาพเชิงบูรณาการ<br><strong
+                    style="color:#7A7C52">นาป่า, ชลบุรี | EEC Zone</strong></p>
+            <div class="hero-cta">
+                <button class="btn-primary"
+                    onclick="document.getElementById('market').scrollIntoView({behavior:'smooth'})">อ่านแผนธุรกิจ</button>
+                <a href="feasibility.html" class="btn-outline" style="text-decoration:none">📊 Feasibility
+                    Calculator</a>
+            </div>
+        </div>
+        <div class="scroll-indicator"><span>เลื่อนลง</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- EXEC STRIP -->
+    <div class="exec-strip">
+        <div class="exec-strip-inner">
+            <div class="exec-stat">
+                <div class="exec-number">5.86<span class="exec-unit">M</span></div>
+                <div class="exec-label">เงินลงทุนรวม (CAPEX + WC)</div>
+            </div>
+            <div class="exec-divider"></div>
+            <div class="exec-stat">
+                <div class="exec-number">656<span class="exec-unit">K</span></div>
+                <div class="exec-label">รายได้/เดือน (เต็มกำลัง)</div>
+            </div>
+            <div class="exec-divider"></div>
+            <div class="exec-stat">
+                <div class="exec-number">2.5<span class="exec-unit">ปี</span></div>
+                <div class="exec-label">คืนทุนจริง (Realistic)</div>
+            </div>
+            <div class="exec-divider"></div>
+            <div class="exec-stat">
+                <div class="exec-number">57<span class="exec-unit">%</span></div>
+                <div class="exec-label">ROI ต่อปี</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- EXECUTIVE SUMMARY -->
+    <section class="bp-section">
+        <div class="section-container">
+            <div class="section-label"><span>1</span> Executive Summary</div>
+            <h2 class="section-title">คลินิกเวชกรรม + Lab + กายภาพบำบัด <span style="color:#7A7C52">ในจุดเดียว</span>
+            </h2>
+            <p class="section-desc">รวมบริการตรวจรักษาทั่วไป (เงินสด + ประกันสังคม), ห้องปฏิบัติการตรวจเลือด,
+                กายภาพบำบัด และโปรแกรม Regenerative Medicine เข้าไว้ในศูนย์เดียว — พร้อมขยายเพิ่มเป็น Cafe, Spa, Nursing
+                Home ตามความต้องการ</p>
+
+            <div class="card-grid">
+                <div class="bp-card sage">
+                    <div class="card-icon">🏥</div>
+                    <h3>Clinic & OPD</h3>
+                    <p>ตรวจรักษาทั่วไป, Regen/Metabolic Package, ขายยา — รับทั้งเงินสดและประกันสังคม</p>
+                    <div class="card-tag">Required</div>
+                </div>
+                <div class="bp-card sage">
+                    <div class="card-icon">🔬</div>
+                    <h3>Diagnostic Lab</h3>
+                    <p>ตรวจเลือด CBC, metabolic panel, hormone — ส่งผลเข้า Fitkub App ทันที</p>
+                    <div class="card-tag">Required</div>
+                </div>
+                <div class="bp-card sage">
+                    <div class="card-icon">🏋️</div>
+                    <h3>Rehab & PT</h3>
+                    <p>Laser, Shockwave, ฟื้นฟูสมรรถภาพ — รองรับแรงงานอุตสาหกรรมและผู้สูงอายุ</p>
+                    <div class="card-tag">Phase 1</div>
+                </div>
+                <div class="bp-card sand">
+                    <div class="card-icon">📦</div>
+                    <h3>Phase 2 — Optional Modules</h3>
+                    <p>☕ Healthy Cafe (฿800K) · 💧 Medical Spa (฿800K) · 🏨 Nursing Home (฿3.5M) —
+                        เลือกขยายตามความต้องการตลาด</p>
+                    <div class="card-tag">Expandable</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bp-quote">ใช้โมเดล Container แบบ Modular — ลงทุนทีละก้าว ขยายตาม Demand จริง</div>
+        </div>
+    </section>
+
+    <!-- MARKET ANALYSIS -->
+    <section id="market" class="bp-section bp-section-alt">
+        <div class="section-container">
+            <div class="section-label"><span>2</span> Market Analysis</div>
+            <h2 class="section-title">ตลาด Wellness <span style="color:#7A7C52">เติบโตต่อเนื่อง</span></h2>
+            <p class="section-desc">อุตสาหกรรมสุขภาพไทยมูลค่ากว่า $42.7B เติบโต 10.1% ต่อปี — Regenerative Medicine
+                โตเร็วกว่าเฉลี่ย 10 เท่า</p>
+
+            <div class="kpi-row">
+                <div class="kpi-box">
+                    <div class="kpi-val">$42.7B</div>
+                    <div class="kpi-lbl">Thai Wellness Market 2024</div>
+                </div>
+                <div class="kpi-box">
+                    <div class="kpi-val">10.1%</div>
+                    <div class="kpi-lbl">CAGR Regenerative Medicine</div>
+                </div>
+                <div class="kpi-box">
+                    <div class="kpi-val">3.5M</div>
+                    <div class="kpi-lbl">Medical Tourists 2025</div>
+                </div>
+                <div class="kpi-box highlight">
+                    <div class="kpi-val">฿670B</div>
+                    <div class="kpi-lbl">Health Tourism Target 2025</div>
+                </div>
+            </div>
+
+            <h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;margin:3rem 0 1rem;color:#2D2F28">ทำไมต้อง
+                <span style="color:#7A7C52">นาป่า, ชลบุรี?</span>
+            </h3>
+            <div class="card-grid">
+                <div class="bp-card sage">
+                    <div class="card-number">42,334</div>
+                    <h3>ประชากรตำบลนาป่า</h3>
+                    <p>+ ประชากรแฝง 20,000-30,000 คนจากโรงงานอุตสาหกรรม — ฐานผู้ป่วยขนาดใหญ่</p>
+                </div>
+                <div class="bp-card olive">
+                    <div class="card-number">60%</div>
+                    <h3>แรงงานใน Social Security</h3>
+                    <p>อาชีพหลักคือแรงงานโรงงาน — มีสิทธิ์ประกันสังคม = ปริมาณคนไข้ Guaranteed</p>
+                </div>
+                <div class="bp-card copper">
+                    <div class="card-number">EEC</div>
+                    <h3>เขตเศรษฐกิจพิเศษ</h3>
+                    <p>ชลบุรีเป็น 1 ใน 3 จังหวัดหลัก EEC — เม็ดเงินลงทุนจากรัฐ ฿58,900M</p>
+                </div>
+            </div>
+
+            <h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;margin:3rem 0 1rem;color:#2D2F28">
+                Competitor Landscape — <span style="color:#C49B6F">ชลบุรี</span></h3>
+            <div class="bp-table-wrap">
+                <table class="bp-table">
+                    <thead>
+                        <tr>
+                            <th>คู่แข่ง</th>
+                            <th>พื้นที่</th>
+                            <th>บริการ</th>
+                            <th>ช่องว่าง (Gap)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>AgeWell (Dulupa Hills)</strong></td>
+                            <td>ศรีราชา</td>
+                            <td>Skilled nursing, geriatric rehab</td>
+                            <td class="comp-gap">ไม่มี OPD/Lab</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Fresh Mediq Global</strong></td>
+                            <td>ชลบุรี</td>
+                            <td>PRP, Stem cell, NK cell</td>
+                            <td class="comp-gap">ไม่มี Primary Care</td>
+                        </tr>
+                        <tr>
+                            <td><strong>KIN Origin</strong></td>
+                            <td>พัทยา</td>
+                            <td>24/7 Nursing home</td>
+                            <td class="comp-gap">ไม่มี Outpatient</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Baan Lalisa</strong></td>
+                            <td>พัทยา</td>
+                            <td>Elderly nursing</td>
+                            <td class="comp-gap">ไม่มี Lab / Regen</td>
+                        </tr>
+                        <tr>
+                            <td><strong>The Senizens</strong></td>
+                            <td>ชลบุรี</td>
+                            <td>Anti-aging, IV drip</td>
+                            <td class="comp-gap">ไม่รับประกันสังคม</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p style="font-size:.85rem;color:rgba(45,47,40,.5);text-align:center;margin-top:1rem">🟢
+                <strong>เราเป็นรายเดียว</strong>ที่รวม OPD + Lab + Regen + PT + ประกันสังคม + Fitkub App ไว้ในที่เดียว
+            </p>
+        </div>
+    </section>
+
+    <!-- OPERATIONS -->
+    <section id="operations" class="bp-section">
+        <div class="section-container">
+            <div class="section-label"><span>3</span> Operations & Implementation</div>
+            <h2 class="section-title">แผนดำเนินงาน <span style="color:#7A7C52">Step by Step</span></h2>
+            <p class="section-desc">ใช้โครงสร้าง Container Modular — ติดตั้งเร็ว, ต้นทุนต่ำ, ขยายได้ตามความต้องการ</p>
+
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start" class="ops-grid">
+                <div>
+                    <h3
+                        style="font-family:'Playfair Display',serif;font-size:1.2rem;margin-bottom:1.5rem;color:#2D2F28">
+                        📅 Project Timeline</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <span class="timeline-badge phase1">Phase 1</span>
+                            <h4>เดือน 1–3: เตรียมพื้นที่</h4>
+                            <p>ติดตั้ง Container 2 ยูนิต, ตกแต่งภายใน, จัดซื้ออุปกรณ์, ขอใบอนุญาต กรมสบส / สปสช.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-badge phase1">Phase 1</span>
+                            <h4>เดือน 4: Grand Opening</h4>
+                            <p>เปิดให้บริการ Clinic + Lab + PT, ลงทะเบียนประกันสังคม, เริ่ม Ramp-up 30%</p>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-badge phase1">Phase 1</span>
+                            <h4>เดือน 4–15: Revenue Ramp-up</h4>
+                            <p>รายได้เติบโตจาก 30% → 100%, breakeven เดือนที่ 5, สร้างฐานผู้ป่วยประจำ</p>
+                        </div>
+                        <div class="timeline-item future">
+                            <span class="timeline-badge phase2">Phase 2</span>
+                            <h4>เดือน 16+: ขยายโมดูล</h4>
+                            <p>ประเมินเพิ่ม Cafe / Spa / Nursing Home ตาม demand data จริง</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3
+                        style="font-family:'Playfair Display',serif;font-size:1.2rem;margin-bottom:1.5rem;color:#2D2F28">
+                        💰 Revenue Streams (5 สาย)</h3>
+                    <div class="bp-table-wrap">
+                        <table class="bp-table">
+                            <thead>
+                                <tr>
+                                    <th>บริการ</th>
+                                    <th class="num">เคส/เดือน</th>
+                                    <th class="num">฿/เคส</th>
+                                    <th class="num">รายได้/เดือน</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="item-icon"><span>💎</span>Regen Package</div>
+                                    </td>
+                                    <td class="num">10</td>
+                                    <td class="num">25,000</td>
+                                    <td class="num" style="color:#7A7C52;font-weight:700">250,000</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="item-icon"><span>🏋️</span>กายภาพบำบัด</div>
+                                    </td>
+                                    <td class="num">130</td>
+                                    <td class="num">1,500</td>
+                                    <td class="num" style="color:#7A7C52;font-weight:700">195,000</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="item-icon"><span>🔬</span>Diagnostic Lab</div>
+                                    </td>
+                                    <td class="num">40</td>
+                                    <td class="num">2,000</td>
+                                    <td class="num" style="color:#7A7C52;font-weight:700">80,000</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="item-icon"><span>🩺</span>OPD เงินสด</div>
+                                    </td>
+                                    <td class="num">80</td>
+                                    <td class="num">800</td>
+                                    <td class="num" style="font-weight:700">64,000</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="item-icon"><span>🛡️</span>OPD ประกันสังคม</div>
+                                    </td>
+                                    <td class="num">150</td>
+                                    <td class="num">450</td>
+                                    <td class="num" style="font-weight:700">67,500</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="3">รวมรายได้ต่อเดือน</td>
+                                    <td class="num total">656,500</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+
+                    <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;margin:2rem 0 1rem;color:#2D2F28">
+                        👥 Org Structure</h3>
+                    <div class="bp-card" style="text-align:center">
+                        <p style="font-size:.9rem;line-height:2;color:rgba(45,47,40,.7)">
+                            <strong style="color:#7A7C52">Medical Director</strong> (แพทย์ — DF Contract)<br>
+                            ├── พยาบาล/ผู้ช่วย (1 คน)<br>
+                            ├── นักเทคนิคการแพทย์ (1 คน)<br>
+                            ├── นักกายภาพบำบัด (1 คน)<br>
+                            └── Admin/Reception (shared)
+                        </p>
+                        <div class="card-tag">Phase 1 — 4 staff + 1 doctor</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINANCIAL -->
+    <section id="financial" class="bp-section bp-section-alt">
+        <div class="section-container">
+            <div class="section-label"><span>4</span> Financial Plan & Projections</div>
+            <h2 class="section-title">แผนการเงิน <span style="color:#7A7C52">+ Ramp-up Projection</span></h2>
+            <p class="section-desc">รวม Working Capital 6 เดือน สำหรับช่วง Ramp-up — ตัวเลขสมจริง ไม่ใช่ Best Case</p>
+
+            <div class="kpi-row">
+                <div class="kpi-box">
+                    <div class="kpi-val">฿3.6M</div>
+                    <div class="kpi-lbl">CAPEX</div>
+                </div>
+                <div class="kpi-box">
+                    <div class="kpi-val">฿2.26M</div>
+                    <div class="kpi-lbl">Working Capital (6 เดือน)</div>
+                </div>
+                <div class="kpi-box highlight">
+                    <div class="kpi-val">฿5.86M</div>
+                    <div class="kpi-lbl">ลงทุนรวม</div>
+                </div>
+                <div class="kpi-box">
+                    <div class="kpi-val">฿377K</div>
+                    <div class="kpi-lbl">OPEX / เดือน</div>
+                </div>
+            </div>
+
+            <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;margin:2.5rem 0 1rem;color:#2D2F28">5-Year
+                Projection</h3>
+            <div class="bp-table-wrap">
+                <table class="bp-table">
+                    <thead>
+                        <tr>
+                            <th>ปี</th>
+                            <th class="num">รายได้</th>
+                            <th class="num">OPEX</th>
+                            <th class="num">กำไรสุทธิ</th>
+                            <th class="num">สะสม</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>ปี 1</strong> <span style="font-size:.75rem;color:rgba(45,47,40,.4)">(Ramp-up
+                                    30→100%)</span></td>
+                            <td class="num">5,383,000</td>
+                            <td class="num">4,524,000</td>
+                            <td class="num" style="color:#7A7C52;font-weight:700">+859,000</td>
+                            <td class="num" style="color:#C49B6F">-5,003,000</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ปี 2</strong> <span style="font-size:.75rem;color:rgba(45,47,40,.4)">(Full
+                                    Capacity)</span></td>
+                            <td class="num">7,878,000</td>
+                            <td class="num">4,524,000</td>
+                            <td class="num" style="color:#7A7C52;font-weight:700">+3,354,000</td>
+                            <td class="num" style="color:#C49B6F">-1,649,000</td>
+                        </tr>
+                        <tr style="background:rgba(122,124,82,.04)">
+                            <td><strong>ปี 3</strong> ✅</td>
+                            <td class="num">7,878,000</td>
+                            <td class="num">4,524,000</td>
+                            <td class="num" style="color:#7A7C52;font-weight:700">+3,354,000</td>
+                            <td class="num" style="color:#7A7C52;font-weight:700">+1,705,000</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ปี 4</strong> <span
+                                    style="font-size:.75rem;color:rgba(45,47,40,.4)">(Growth)</span></td>
+                            <td class="num">8,666,000</td>
+                            <td class="num">4,750,000</td>
+                            <td class="num" style="color:#7A7C52;font-weight:700">+3,916,000</td>
+                            <td class="num" style="color:#7A7C52">+5,621,000</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ปี 5</strong> <span
+                                    style="font-size:.75rem;color:rgba(45,47,40,.4)">(Growth)</span></td>
+                            <td class="num">9,500,000</td>
+                            <td class="num">5,000,000</td>
+                            <td class="num" style="color:#7A7C52;font-weight:700">+4,500,000</td>
+                            <td class="num" style="color:#7A7C52">+10,121,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p style="text-align:center;font-size:.85rem;color:rgba(45,47,40,.5);margin:1rem 0 2rem">✅ คืนทุนเต็มจำนวน
+                (฿5.86M) กลางปีที่ 3 — <strong>Realistic Payback ~2.49 ปี</strong></p>
+
+            <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;margin:2rem 0 1rem;color:#2D2F28">Phase 2
+                Expansion ROI</h3>
+            <div class="card-grid" style="grid-template-columns:repeat(3,1fr)">
+                <div class="bp-card">
+                    <div class="card-icon">☕</div>
+                    <h3>Healthy Cafe</h3>
+                    <p>CAPEX ฿800K · Revenue ฿180K/mo</p>
+                    <div class="card-number" style="margin-top:.5rem">143%<span
+                            style="font-size:.6em;color:rgba(45,47,40,.4)"> ROI</span></div>
+                </div>
+                <div class="bp-card">
+                    <div class="card-icon">💧</div>
+                    <h3>Medical Spa</h3>
+                    <p>CAPEX ฿800K · Revenue ฿150K/mo</p>
+                    <div class="card-number" style="margin-top:.5rem">135%<span
+                            style="font-size:.6em;color:rgba(45,47,40,.4)"> ROI</span></div>
+                </div>
+                <div class="bp-card">
+                    <div class="card-icon">🏨</div>
+                    <h3>Nursing Home</h3>
+                    <p>CAPEX ฿3.5M · Revenue ฿280K/mo</p>
+                    <div class="card-number" style="margin-top:.5rem">34%<span
+                            style="font-size:.6em;color:rgba(45,47,40,.4)"> ROI</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RISKS -->
+    <section id="risks" class="bp-section">
+        <div class="section-container">
+            <div class="section-label"><span>5</span> Risk Assessment</div>
+            <h2 class="section-title">ความเสี่ยง <span style="color:#C49B6F">& แผนรับมือ</span></h2>
+            <div class="bp-table-wrap">
+                <table class="bp-table">
+                    <thead>
+                        <tr>
+                            <th>ความเสี่ยง</th>
+                            <th>โอกาส</th>
+                            <th>ผลกระทบ</th>
+                            <th>แผนรับมือ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ramp-up ช้ากว่าคาด</td>
+                            <td class="risk-med">ปานกลาง</td>
+                            <td class="risk-high">สูง</td>
+                            <td>Working Capital 6 เดือน; ปรับงบการตลาด</td>
+                        </tr>
+                        <tr>
+                            <td>แพทย์ลาออก</td>
+                            <td class="risk-med">ปานกลาง</td>
+                            <td class="risk-high">สูง</td>
+                            <td>DF structure แข่งขันได้; เสนอ equity stake</td>
+                        </tr>
+                        <tr>
+                            <td>เบิก SSO ล่าช้า</td>
+                            <td class="risk-low">ต่ำ</td>
+                            <td class="risk-med">ปานกลาง</td>
+                            <td>รักษาสัดส่วน Cash-pay ≥50%</td>
+                        </tr>
+                        <tr>
+                            <td>กฎหมายเปลี่ยน</td>
+                            <td class="risk-low">ต่ำ</td>
+                            <td class="risk-med">ปานกลาง</td>
+                            <td>ติดตาม สบส./SSO อย่างใกล้ชิด</td>
+                        </tr>
+                        <tr>
+                            <td>คู่แข่งรายใหม่</td>
+                            <td class="risk-med">ปานกลาง</td>
+                            <td class="risk-med">ปานกลาง</td>
+                            <td>First-mover advantage; Fitkub ecosystem lock-in</td>
+                        </tr>
+                        <tr>
+                            <td>อุปกรณ์เสียหาย</td>
+                            <td class="risk-low">ต่ำ</td>
+                            <td class="risk-high">สูง</td>
+                            <td>ประกัน + สัญญาบำรุงรักษา + อุปกรณ์สำรอง</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLOSING -->
+    <section class="bp-section bp-section-alt" style="text-align:center">
+        <div class="section-container">
+            <div class="section-label" style="justify-content:center">บทสรุป</div>
+            <h2 class="section-title" style="margin:0 auto 1.5rem;max-width:700px"><span
+                    style="color:#7A7C52">ลงทุนทีละก้าว</span> — ขยายตาม Demand จริง</h2>
+            <p class="section-desc" style="text-align:center;margin:0 auto 2rem;max-width:650px">Modular container-based
+                facility ที่สามารถ scale จาก 3 โมดูลพื้นฐาน ไปจนถึง 6 โมดูลเต็มรูปแบบ — ด้วยประชากรแฝงกว่า 60,000
+                คนในนาป่า และสิทธิ์ประกันสังคม ฐานผู้ป่วยพร้อม ตลาดพร้อม</p>
+
+            <div class="closing-stats">
+                <div class="cs-item">
+                    <div class="cs-value" style="color:#7A7C52">฿5.86M</div>
+                    <div class="cs-label">ลงทุนรวม</div>
+                </div>
+                <div class="cs-item">
+                    <div class="cs-value" style="color:#C49B6F">2.5 ปี</div>
+                    <div class="cs-label">คืนทุน Realistic</div>
+                </div>
+                <div class="cs-item">
+                    <div class="cs-value" style="color:#2D2F28">57%</div>
+                    <div class="cs-label">ROI ต่อปี</div>
+                </div>
+                <div class="cs-item">
+                    <div class="cs-value" style="color:#7A7C52">฿10.1M</div>
+                    <div class="cs-label">กำไรสะสม 5 ปี</div>
+                </div>
+            </div>
+
+            <div style="margin-top:3rem;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+                <a href="feasibility.html" class="btn-primary"
+                    style="text-decoration:none;padding:1rem 2.5rem;font-size:1rem">📊 Interactive Feasibility
+                    Calculator</a>
+                <a href="index.html" class="btn-outline"
+                    style="text-decoration:none;padding:1rem 2.5rem;font-size:1rem">← กลับหน้าหลัก</a>
+            </div>
+            <p style="margin-top:3rem;font-size:.78rem;color:rgba(45,47,40,.3);font-style:italic">— Regenerative
+                Wellness Oasis · นาป่า, ชลบุรี · มีนาคม 2026 —</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Regenerative Wellness Oasis — Napa, Chonburi | Business Plan</p>
+    </footer>
+
+    <script>
+        window.addEventListener('load', () => setTimeout(() => document.getElementById('loader').classList.add('hidden'), 600));
+        window.addEventListener('scroll', () => document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 50));
+        const ro = new IntersectionObserver(e => e.forEach(x => { if (x.isIntersecting) { x.target.style.opacity = '1'; x.target.style.transform = 'translateY(0)'; ro.unobserve(x.target) } }), { threshold: .1 });
+        document.querySelectorAll('.bp-card,.kpi-box,.timeline-item,.bp-table-wrap,.card-grid,.kpi-row').forEach(el => { el.style.opacity = '0'; el.style.transform = 'translateY(20px)'; el.style.transition = 'opacity .6s ease,transform .6s ease'; ro.observe(el) });
+        (function () { const c = document.getElementById('particles'); for (let i = 0; i < 20; i++) { const p = document.createElement('div'); p.className = 'particle'; p.style.left = Math.random() * 100 + '%'; p.style.animationDuration = (8 + Math.random() * 12) + 's'; p.style.animationDelay = Math.random() * 10 + 's'; p.style.width = p.style.height = (2 + Math.random() * 3) + 'px'; c.appendChild(p) } })();
+    </script>
+</body>
+
+</html>

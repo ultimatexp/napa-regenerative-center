@@ -11,29 +11,24 @@
 </head>
 
 <body>
-
-    <!-- LOADING SCREEN -->
     <div class="loader" id="loader">
         <div class="loader-ring" style="position:relative"></div>
     </div>
-
-    <!-- PARTICLES -->
     <div class="particles" id="particles"></div>
 
-    <!-- NAVIGATION -->
     <nav id="nav">
         <a href="index.html" class="nav-logo" style="text-decoration:none">REGENERATIVE OASIS</a>
         <ul class="nav-links">
+            <li><a href="#modules">โมดูล</a></li>
             <li><a href="#capex">CAPEX</a></li>
             <li><a href="#opex">OPEX</a></li>
             <li><a href="#revenue">รายได้</a></li>
             <li><a href="#performance">ผลตอบแทน</a></li>
-            <li><a href="#strategy">กลยุทธ์</a></li>
             <li><a href="index.html">← กลับหน้าหลัก</a></li>
         </ul>
     </nav>
 
-    <!-- ============================== HERO ============================== -->
+    <!-- HERO -->
     <section class="hero feasibility-hero">
         <div class="hero-bg feasibility-hero-bg"></div>
         <div class="hero-content">
@@ -41,811 +36,619 @@
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
                 </svg>
-                Financial Feasibility Study — Phase 1 with Lab
+                Interactive Financial Feasibility Calculator
             </div>
-            <h1>
-                <span class="gradient-text">Financial</span><br>
-                Feasibility Study
-            </h1>
-            <p class="hero-subtitle">
-                การศึกษาความเป็นไปได้ทางการเงิน<br>
-                <strong style="color:var(--sage)">Phase 1 — Regenerative Center + Lab</strong>
-            </p>
+            <h1><span class="gradient-text">Financial</span><br>Feasibility Study</h1>
+            <p class="hero-subtitle">เลือกโมดูลที่ต้องการ แล้วดูตัวเลขทางการเงินเปลี่ยนแบบ<strong
+                    style="color:var(--sage)"> Real-time</strong></p>
             <div class="hero-cta">
                 <button class="btn-primary"
-                    onclick="document.getElementById('capex').scrollIntoView({behavior:'smooth'})">ดูรายละเอียด</button>
+                    onclick="document.getElementById('modules').scrollIntoView({behavior:'smooth'})">เลือกโมดูล</button>
                 <button class="btn-outline"
                     onclick="document.getElementById('performance').scrollIntoView({behavior:'smooth'})">สรุปผลตอบแทน</button>
             </div>
         </div>
-        <div class="scroll-indicator">
-            <span>เลื่อนลง</span>
+        <div class="scroll-indicator"><span>เลื่อนลง</span>
             <div class="scroll-line"></div>
         </div>
     </section>
 
-    <!-- ============================== EXECUTIVE SUMMARY STRIP ============================== -->
+    <!-- EXEC STRIP -->
     <div class="exec-strip">
         <div class="exec-strip-inner">
             <div class="exec-stat reveal">
-                <div class="exec-number">3.6<span class="exec-unit">M</span></div>
-                <div class="exec-label">เงินลงทุนเริ่มต้น (บาท)</div>
+                <div class="exec-number"><span id="ex-invest">3.6</span><span class="exec-unit">M</span></div>
+                <div class="exec-label">เงินลงทุนรวม (CAPEX + WC)</div>
             </div>
             <div class="exec-divider"></div>
             <div class="exec-stat reveal reveal-delay-1">
-                <div class="exec-number">279<span class="exec-unit">K</span></div>
-                <div class="exec-label">กำไรสุทธิ / เดือน (บาท)</div>
+                <div class="exec-number"><span id="ex-profit">279</span><span class="exec-unit">K</span></div>
+                <div class="exec-label">กำไร/เดือน (เต็มกำลัง)</div>
             </div>
             <div class="exec-divider"></div>
             <div class="exec-stat reveal reveal-delay-2">
-                <div class="exec-number">1.07<span class="exec-unit">ปี</span></div>
-                <div class="exec-label">ระยะเวลาคืนทุน</div>
+                <div class="exec-number"><span id="ex-payback">2.1</span><span class="exec-unit">ปี</span></div>
+                <div class="exec-label">คืนทุนจริง (Realistic)</div>
             </div>
             <div class="exec-divider"></div>
             <div class="exec-stat reveal reveal-delay-3">
-                <div class="exec-number">93<span class="exec-unit">%</span></div>
+                <div class="exec-number"><span id="ex-roi">93</span><span class="exec-unit">%</span></div>
                 <div class="exec-label">ROI ต่อปี</div>
             </div>
         </div>
     </div>
 
-    <!-- ============================== CAPEX ============================== -->
-    <section id="capex" class="fs-section">
+    <!-- MODULE SELECTOR -->
+    <section id="modules" class="fs-section">
         <div class="section-container">
-            <div class="section-label reveal">
-                <span>1</span> งบประมาณการลงทุน
-            </div>
-            <h2 class="section-title reveal reveal-delay-1">
-                CAPEX — <span style="color:var(--sage)">เงินลงทุนเริ่มแรก</span>
+            <div class="section-label reveal">เลือกโมดูล</div>
+            <h2 class="section-title reveal reveal-delay-1">ปรับแต่ง <span style="color:var(--sage)">โมดูลธุรกิจ</span>
             </h2>
-            <p class="section-desc reveal reveal-delay-2">
-                เน้นอุปกรณ์ตรวจเบื้องต้นที่จำเป็นสำหรับ Metabolic & Regenerative
-                (เช่น Point of Care Testing หรือเครื่องตรวจเลือดเบื้องต้น)
-            </p>
+            <p class="section-desc reveal reveal-delay-2">เลือกบริการที่ต้องการ — ตัวเลขทางการเงินจะอัปเดตแบบ Real-time
+                ทันที</p>
+            <div class="module-grid reveal reveal-delay-3" id="moduleGrid"></div>
+            <div class="module-summary reveal" id="moduleSummary"></div>
+        </div>
+    </section>
 
+    <!-- CAPEX -->
+    <section id="capex" class="fs-section fs-section-alt">
+        <div class="section-container">
+            <div class="section-label reveal"><span>1</span> งบประมาณการลงทุน</div>
+            <h2 class="section-title reveal reveal-delay-1">CAPEX — <span
+                    style="color:var(--sage)">เงินลงทุนเริ่มแรก</span></h2>
+            <p class="section-desc reveal reveal-delay-2">รายละเอียดงบลงทุนตามโมดูลที่เลือก</p>
             <div class="fs-table-wrap reveal reveal-delay-3">
-                <table class="fs-table">
-                    <thead>
-                        <tr>
-                            <th>รายการ</th>
-                            <th>รายละเอียด</th>
-                            <th class="num">งบประมาณ (บาท)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <div class="item-with-icon">
-                                    <span class="table-icon">🏗️</span>
-                                    โครงสร้างอาคาร (Modular)
-                                </div>
-                            </td>
-                            <td>ตู้คอนเทนเนอร์ 2 ยูนิต (ปรับโซนภายในเป็นห้อง Lab ขนาดเล็ก)</td>
-                            <td class="num">1,100,000</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="item-with-icon">
-                                    <span class="table-icon">🧬</span>
-                                    เครื่องมือแพทย์ & กายภาพ
-                                </div>
-                            </td>
-                            <td>Laser, Shockwave, อุปกรณ์ Regen</td>
-                            <td class="num">1,200,000</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="item-with-icon">
-                                    <span class="table-icon">🔬</span>
-                                    อุปกรณ์ Lab & ตรวจเลือด
-                                </div>
-                            </td>
-                            <td>เครื่องวิเคราะห์สารเคมีในเลือด, centrifuge, ตู้แช่เก็บสิ่งส่งตรวจ</td>
-                            <td class="num">500,000</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="item-with-icon">
-                                    <span class="table-icon">🛋️</span>
-                                    ตกแต่งภายใน & เฟอร์นิเจอร์
-                                </div>
-                            </td>
-                            <td>งานระบบท่อน้ำ/ไฟ และเคาน์เตอร์ Lab มาตรฐาน</td>
-                            <td class="num">500,000</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="item-with-icon">
-                                    <span class="table-icon">🌿</span>
-                                    งาน Landscape & ระบบ IT
-                                </div>
-                            </td>
-                            <td>สวนป่า และระบบเชื่อมต่อข้อมูล Lab เข้า Fitkub</td>
-                            <td class="num">300,000</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td colspan="2">รวมเงินลงทุนเริ่มต้น</td>
-                            <td class="num total">3,600,000</td>
-                        </tr>
-                    </tfoot>
-                </table>
+                <table class="fs-table" id="capexTable"></table>
             </div>
-
-            <!-- CAPEX Donut Chart -->
             <div class="chart-section reveal">
-                <h3 class="chart-title">สัดส่วนงบลงทุน</h3>
+                <h3 class="chart-title">สัดส่วนงบลงทุนตามโมดูล</h3>
                 <div class="donut-container">
-                    <svg class="donut-chart" viewBox="0 0 200 200">
-                        <!-- Background circle -->
-                        <circle cx="100" cy="100" r="80" fill="none" stroke="rgba(163,165,118,0.06)"
-                            stroke-width="28" />
-                        <!-- Segments — total circumference = 2π×80 ≈ 502.65 -->
-                        <!-- Building 30.56% = 153.6 -->
-                        <circle class="donut-seg seg-1" cx="100" cy="100" r="80" fill="none" stroke="var(--sage)"
-                            stroke-width="28" stroke-dasharray="153.6 349.05" stroke-dashoffset="0"
-                            transform="rotate(-90 100 100)" />
-                        <!-- Medical 33.33% = 167.55 -->
-                        <circle class="donut-seg seg-2" cx="100" cy="100" r="80" fill="none" stroke="var(--sand)"
-                            stroke-width="28" stroke-dasharray="167.55 335.1" stroke-dashoffset="-153.6"
-                            transform="rotate(-90 100 100)" />
-                        <!-- Lab 13.89% = 69.81 -->
-                        <circle class="donut-seg seg-3" cx="100" cy="100" r="80" fill="none" stroke="var(--cream)"
-                            stroke-width="28" stroke-dasharray="69.81 432.84" stroke-dashoffset="-321.15"
-                            transform="rotate(-90 100 100)" />
-                        <!-- Interior 13.89% -->
-                        <circle class="donut-seg seg-4" cx="100" cy="100" r="80" fill="none" stroke="var(--olive)"
-                            stroke-width="28" stroke-dasharray="69.81 432.84" stroke-dashoffset="-390.96"
-                            transform="rotate(-90 100 100)" />
-                        <!-- Landscape 8.33% = 41.89 -->
-                        <circle class="donut-seg seg-5" cx="100" cy="100" r="80" fill="none" stroke="var(--sage-light)"
-                            stroke-width="28" stroke-dasharray="41.89 460.76" stroke-dashoffset="-460.77"
-                            transform="rotate(-90 100 100)" />
-                        <!-- Center text -->
-                        <text x="100" y="94" text-anchor="middle" fill="var(--cream)" font-family="Playfair Display"
-                            font-size="22" font-weight="800">3.6M</text>
-                        <text x="100" y="114" text-anchor="middle" fill="var(--text-muted)" font-family="Sarabun"
-                            font-size="10">บาท</text>
-                    </svg>
-                    <div class="donut-legend">
-                        <div class="legend-item"><span class="legend-dot" style="background:var(--sage)"></span>
-                            โครงสร้างอาคาร
-                            <strong>30.6%</strong>
-                        </div>
-                        <div class="legend-item"><span class="legend-dot" style="background:var(--sand)"></span>
-                            เครื่องมือแพทย์
-                            <strong>33.3%</strong>
-                        </div>
-                        <div class="legend-item"><span class="legend-dot" style="background:var(--cream)"></span>
-                            อุปกรณ์ Lab
-                            <strong>13.9%</strong>
-                        </div>
-                        <div class="legend-item"><span class="legend-dot" style="background:var(--olive)"></span>
-                            ตกแต่งภายใน
-                            <strong>13.9%</strong>
-                        </div>
-                        <div class="legend-item"><span class="legend-dot" style="background:var(--sage-light)"></span>
-                            Landscape & IT
-                            <strong>8.3%</strong>
-                        </div>
-                    </div>
+                    <svg class="donut-chart" viewBox="0 0 200 200" id="capexDonut"></svg>
+                    <div class="donut-legend" id="capexLegend"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ============================== OPEX ============================== -->
-    <section id="opex" class="fs-section fs-section-alt">
+    <!-- OPEX -->
+    <section id="opex" class="fs-section">
         <div class="section-container">
-            <div class="section-label reveal">
-                <span>2</span> รายจ่ายรายเดือน
-            </div>
-            <h2 class="section-title reveal reveal-delay-1">
-                OPEX — <span style="color:var(--sand)">ค่าใช้จ่ายรายเดือน</span>
-            </h2>
-            <p class="section-desc reveal reveal-delay-2">
-                เพิ่มค่าสารเคมีและวัสดุสิ้นเปลืองสำหรับ Lab และค่ายาสำหรับบริการตรวจรักษาทั่วไป
-            </p>
-
+            <div class="section-label reveal"><span>2</span> รายจ่ายรายเดือน</div>
+            <h2 class="section-title reveal reveal-delay-1">OPEX — <span
+                    style="color:var(--sand)">ค่าใช้จ่ายรายเดือน</span></h2>
+            <p class="section-desc reveal reveal-delay-2">ประมาณการค่าใช้จ่ายรายเดือนตามโมดูลที่เลือก</p>
             <div class="fs-table-wrap reveal reveal-delay-3">
-                <table class="fs-table">
-                    <thead>
-                        <tr>
-                            <th>รายการ</th>
-                            <th>รายละเอียด</th>
-                            <th class="num">งบประมาณ (บาท/เดือน)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <div class="item-with-icon">
-                                    <span class="table-icon">👨‍⚕️</span>
-                                    ค่าตอบแทนแพทย์ (DF)
-                                </div>
-                            </td>
-                            <td>ค่าวิชาชีพแพทย์</td>
-                            <td class="num">120,000</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="item-with-icon">
-                                    <span class="table-icon">👥</span>
-                                    เงินเดือนบุคลากร
-                                </div>
-                            </td>
-                            <td>นักกายภาพ (1), พยาบาล/นักเทคนิคการแพทย์ (1)</td>
-                            <td class="num">85,000</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="item-with-icon">
-                                    <span class="table-icon">💊</span>
-                                    วัสดุทางการแพทย์ & Lab
-                                </div>
-                            </td>
-                            <td>น้ำยาตรวจวิเคราะห์ (Reagents), วิตามิน, วัสดุสิ้นเปลือง</td>
-                            <td class="num">75,000</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="item-with-icon">
-                                    <span class="table-icon">⚡</span>
-                                    ค่าสาธารณูปโภค & IT
-                                </div>
-                            </td>
-                            <td>ไฟฟ้า (Lab ต้องคุมอุณหภูมิ), อินเทอร์เน็ต</td>
-                            <td class="num">15,000</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="item-with-icon">
-                                    <span class="table-icon">📣</span>
-                                    ค่าการตลาดออนไลน์
-                                </div>
-                            </td>
-                            <td>ยิงโฆษณาเน้นกลุ่มตรวจสุขภาพเชิงลึก</td>
-                            <td class="num">20,000</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="item-with-icon">
-                                    <span class="table-icon">💉</span>
-                                    ค่ายาและเวชภัณฑ์ (OPD)
-                                </div>
-                            </td>
-                            <td>ยาสำหรับเคสตรวจรักษาทั่วไป (เงินสด + ประกันสังคม)</td>
-                            <td class="num">50,000</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="item-with-icon">
-                                    <span class="table-icon">🔧</span>
-                                    ค่าเบ็ดเตล็ด
-                                </div>
-                            </td>
-                            <td>ซ่อมบำรุงและค่ากำจัดขยะติดเชื้อ</td>
-                            <td class="num">12,000</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td colspan="2">รวมรายจ่ายรายเดือน</td>
-                            <td class="num total">377,000</td>
-                        </tr>
-                    </tfoot>
-                </table>
+                <table class="fs-table" id="opexTable"></table>
             </div>
-
-            <!-- OPEX Bar Chart -->
             <div class="chart-section reveal">
-                <h3 class="chart-title">สัดส่วนค่าใช้จ่ายรายเดือน</h3>
-                <div class="bar-chart">
-                    <div class="bar-row">
-                        <span class="bar-label">ค่าตอบแทนแพทย์</span>
-                        <div class="bar-track">
-                            <div class="bar-fill" style="--bar-width:31.8%;--bar-color:var(--sage)"
-                                data-value="120,000"></div>
-                        </div>
-                    </div>
-                    <div class="bar-row">
-                        <span class="bar-label">เงินเดือนบุคลากร</span>
-                        <div class="bar-track">
-                            <div class="bar-fill" style="--bar-width:22.5%;--bar-color:var(--sand)" data-value="85,000">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bar-row">
-                        <span class="bar-label">วัสดุแพทย์ & Lab</span>
-                        <div class="bar-track">
-                            <div class="bar-fill" style="--bar-width:19.9%;--bar-color:var(--cream)"
-                                data-value="75,000"></div>
-                        </div>
-                    </div>
-                    <div class="bar-row">
-                        <span class="bar-label">ค่ายาเวชภัณฑ์ OPD</span>
-                        <div class="bar-track">
-                            <div class="bar-fill" style="--bar-width:13.3%;--bar-color:#8B9467" data-value="50,000">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bar-row">
-                        <span class="bar-label">การตลาด</span>
-                        <div class="bar-track">
-                            <div class="bar-fill" style="--bar-width:5.3%;--bar-color:var(--sage-light)"
-                                data-value="20,000"></div>
-                        </div>
-                    </div>
-                    <div class="bar-row">
-                        <span class="bar-label">สาธารณูปโภค</span>
-                        <div class="bar-track">
-                            <div class="bar-fill" style="--bar-width:4%;--bar-color:var(--olive)" data-value="15,000">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bar-row">
-                        <span class="bar-label">เบ็ดเตล็ด</span>
-                        <div class="bar-track">
-                            <div class="bar-fill" style="--bar-width:3.2%;--bar-color:var(--sand-light)"
-                                data-value="12,000"></div>
-                        </div>
-                    </div>
-                </div>
+                <h3 class="chart-title">สัดส่วนค่าใช้จ่ายรายเดือนตามโมดูล</h3>
+                <div class="bar-chart" id="opexBars"></div>
             </div>
         </div>
     </section>
 
-    <!-- ============================== REVENUE ============================== -->
-    <section id="revenue" class="fs-section">
+    <!-- REVENUE -->
+    <section id="revenue" class="fs-section fs-section-alt">
         <div class="section-container">
-            <div class="section-label reveal">
-                <span>3</span> ประมาณการรายได้
-            </div>
-            <h2 class="section-title reveal reveal-delay-1">
-                Revenue Model — <span style="color:var(--sage)">รายได้รายเดือน</span>
-            </h2>
-            <p class="section-desc reveal reveal-delay-2">
-                ครอบคลุมทั้งบริการเฉพาะทาง, Lab, ตรวจรักษาทั่วไป + ขายยา ทั้งเคสเงินสดและประกันสังคม
-            </p>
-
+            <div class="section-label reveal"><span>3</span> ประมาณการรายได้</div>
+            <h2 class="section-title reveal reveal-delay-1">Revenue Model — <span
+                    style="color:var(--sage)">รายได้รายเดือน</span></h2>
+            <p class="section-desc reveal reveal-delay-2">ประมาณการรายได้ต่อเดือนจากโมดูลที่เลือก</p>
             <div class="fs-table-wrap reveal reveal-delay-3">
-                <table class="fs-table revenue-table">
-                    <thead>
-                        <tr>
-                            <th>บริการ</th>
-                            <th>ปริมาณคนไข้ (เคส/เดือน)</th>
-                            <th class="num">ราคาเฉลี่ย (บาท)</th>
-                            <th class="num">รวมรายได้ (บาท)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <div class="item-with-icon">
-                                    <span class="table-icon">🏥</span>
-                                    กายภาพบำบัดเชิงฟื้นฟู (PT)
-                                </div>
-                            </td>
-                            <td>130 เคส <span class="detail-note">(5 เคส/วัน)</span></td>
-                            <td class="num">1,500</td>
-                            <td class="num highlight-sage">195,000</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="item-with-icon">
-                                    <span class="table-icon">🧬</span>
-                                    Regen / Metabolic Package
-                                </div>
-                            </td>
-                            <td>10 เคส <span class="detail-note">(โปรแกรมย้อนวัย/คุมน้ำตาล)</span></td>
-                            <td class="num">25,000</td>
-                            <td class="num highlight-sand">250,000</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="item-with-icon">
-                                    <span class="table-icon">🔬</span>
-                                    Diagnostic Lab Services
-                                </div>
-                            </td>
-                            <td>40 เคส <span class="detail-note">(ตรวจเลือดรายตัว/ตรวจสุขภาพ)</span></td>
-                            <td class="num">2,000</td>
-                            <td class="num highlight-cream">80,000</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="item-with-icon">
-                                    <span class="table-icon">🩺</span>
-                                    ตรวจรักษาทั่วไป + ขายยา (เงินสด)
-                                </div>
-                            </td>
-                            <td>80 เคส <span class="detail-note">(3 เคส/วัน)</span></td>
-                            <td class="num">800</td>
-                            <td class="num highlight-sage">64,000</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="item-with-icon">
-                                    <span class="table-icon">🛡️</span>
-                                    ตรวจรักษา + ขายยา (ประกันสังคม)
-                                </div>
-                            </td>
-                            <td>150 เคส <span class="detail-note">(6 เคส/วัน)</span></td>
-                            <td class="num">450</td>
-                            <td class="num highlight-sand">67,500</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td colspan="3">รวมรายได้ต่อเดือน</td>
-                            <td class="num total">656,500</td>
-                        </tr>
-                    </tfoot>
-                </table>
+                <table class="fs-table" id="revenueTable"></table>
             </div>
-
-            <!-- Revenue comparison -->
             <div class="revenue-visual reveal">
-                <div class="revenue-bar-stack">
-                    <div class="rev-segment" style="flex:195;background:var(--sage)">
-                        <span class="rev-seg-label">PT</span>
-                        <span class="rev-seg-amount">195K</span>
-                    </div>
-                    <div class="rev-segment" style="flex:250;background:var(--sand)">
-                        <span class="rev-seg-label">Regen</span>
-                        <span class="rev-seg-amount">250K</span>
-                    </div>
-                    <div class="rev-segment" style="flex:80;background:var(--cream);color:var(--bg-dark)">
-                        <span class="rev-seg-label">Lab</span>
-                        <span class="rev-seg-amount">80K</span>
-                    </div>
-                    <div class="rev-segment" style="flex:64;background:var(--olive);color:var(--cream)">
-                        <span class="rev-seg-label">OPD เงินสด</span>
-                        <span class="rev-seg-amount">64K</span>
-                    </div>
-                    <div class="rev-segment" style="flex:67.5;background:var(--sage-light);color:var(--bg-dark)">
-                        <span class="rev-seg-label">ประกันสังคม</span>
-                        <span class="rev-seg-amount">67.5K</span>
-                    </div>
-                </div>
-                <div class="rev-total-label">รวม ฿656,500 / เดือน</div>
+                <div class="revenue-bar-stack" id="revenueBar"></div>
+                <div class="rev-total-label" id="revTotalLabel"></div>
             </div>
         </div>
     </section>
 
-    <!-- ============================== FINANCIAL PERFORMANCE ============================== -->
+    <!-- CASH FLOW PROJECTION -->
+    <section id="cashflow" class="fs-section">
+        <div class="section-container">
+            <div class="section-label reveal"><span>4</span> ประมาณการ Cash Flow</div>
+            <h2 class="section-title reveal reveal-delay-1">Revenue Ramp-up & <span style="color:var(--sage)">Working
+                    Capital</span></h2>
+            <p class="section-desc reveal reveal-delay-2">ปีแรกรายได้จะค่อยๆ เติบโตตามจำนวนคนไข้ —
+                ต้องมีเงินทุนหมุนเวียนรองรับ 6 เดือน</p>
+            <div class="wc-cards reveal reveal-delay-3" id="wcCards"></div>
+            <div class="rampup-chart reveal" id="rampupChart"></div>
+            <div class="cashflow-table-wrap reveal">
+                <table class="fs-table" id="cashflowTable"></table>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINANCIAL PERFORMANCE -->
     <section id="performance" class="fs-section fs-section-alt">
         <div class="section-container">
-            <div class="section-label reveal" style="justify-content:center">
-                <span>4</span> สรุปผลตอบแทน
-            </div>
+            <div class="section-label reveal" style="justify-content:center"><span>5</span> สรุปผลตอบแทน</div>
             <h2 class="section-title reveal reveal-delay-1"
-                style="text-align:center;max-width:700px;margin:0 auto 1rem">
-                Financial Performance — <span style="color:var(--sage)">With Lab</span>
-            </h2>
+                style="text-align:center;max-width:700px;margin:0 auto 1rem">Financial Performance</h2>
             <p class="section-desc reveal reveal-delay-2" style="text-align:center;max-width:650px;margin:0 auto 3rem">
-                ผลตอบแทนทางการเงินเมื่อรวมส่วนของห้องปฏิบัติการ (Lab) เข้าไปใน Phase 1
-            </p>
-
-            <div class="kpi-grid">
-                <!-- Revenue -->
-                <div class="kpi-card reveal">
-                    <div class="kpi-icon-wrap income">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
-                            <polyline points="17 6 23 6 23 12" />
-                        </svg>
-                    </div>
-                    <div class="kpi-value">656,500</div>
-                    <div class="kpi-subtitle">รายได้ / เดือน (บาท)</div>
-                    <div class="kpi-trend up">
-                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="3">
-                            <polyline points="18 15 12 9 6 15" />
-                        </svg>
-                        Revenue
-                    </div>
-                </div>
-
-                <!-- Expense -->
-                <div class="kpi-card reveal reveal-delay-1">
-                    <div class="kpi-icon-wrap expense">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <polyline points="23 18 13.5 8.5 8.5 13.5 1 6" />
-                            <polyline points="17 18 23 18 23 12" />
-                        </svg>
-                    </div>
-                    <div class="kpi-value">377,000</div>
-                    <div class="kpi-subtitle">รายจ่าย / เดือน (บาท)</div>
-                    <div class="kpi-trend neutral">OPEX</div>
-                </div>
-
-                <!-- Monthly Profit -->
-                <div class="kpi-card kpi-highlight reveal reveal-delay-2">
-                    <div class="kpi-icon-wrap profit">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <circle cx="12" cy="12" r="10" />
-                            <path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8" />
-                            <path d="M12 18V6" />
-                        </svg>
-                    </div>
-                    <div class="kpi-value highlight-number">279,500</div>
-                    <div class="kpi-subtitle">กำไรสุทธิ / เดือน (EBITDA)</div>
-                    <div class="kpi-formula">656,500 − 377,000 = <strong>279,500</strong></div>
-                </div>
-
-                <!-- Annual Profit -->
-                <div class="kpi-card reveal reveal-delay-3">
-                    <div class="kpi-icon-wrap annual">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
-                            <line x1="16" y1="2" x2="16" y2="6" />
-                            <line x1="8" y1="2" x2="8" y2="6" />
-                            <line x1="3" y1="10" x2="21" y2="10" />
-                        </svg>
-                    </div>
-                    <div class="kpi-value">3,354,000</div>
-                    <div class="kpi-subtitle">กำไรสุทธิต่อปี (บาท)</div>
-                    <div class="kpi-trend up">
-                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="3">
-                            <polyline points="18 15 12 9 6 15" />
-                        </svg>
-                        Annual
-                    </div>
-                </div>
-            </div>
-
-            <!-- Payback & ROI Cards -->
-            <div class="payback-grid reveal">
-                <div class="payback-card">
-                    <div class="payback-visual">
-                        <svg class="payback-ring" viewBox="0 0 120 120">
-                            <circle cx="60" cy="60" r="50" fill="none" stroke="rgba(163,165,118,0.08)"
-                                stroke-width="10" />
-                            <circle cx="60" cy="60" r="50" fill="none" stroke="var(--sage)" stroke-width="10"
-                                stroke-dasharray="280 34" stroke-linecap="round" transform="rotate(-90 60 60)" />
-                            <text x="60" y="55" text-anchor="middle" fill="var(--cream)" font-family="Playfair Display"
-                                font-size="20" font-weight="800">1.07</text>
-                            <text x="60" y="72" text-anchor="middle" fill="var(--text-muted)" font-family="Sarabun"
-                                font-size="10">ปี</text>
-                        </svg>
-                    </div>
-                    <div>
-                        <h3>Payback Period</h3>
-                        <p>ระยะเวลาคืนทุน</p>
-                        <div class="payback-formula">3,600,000 ÷ 3,354,000 ≈ <strong>1.07 ปี (~1 ปี 1 เดือน)</strong>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="payback-card">
-                    <div class="payback-visual">
-                        <svg class="payback-ring" viewBox="0 0 120 120">
-                            <circle cx="60" cy="60" r="50" fill="none" stroke="rgba(221,186,148,0.08)"
-                                stroke-width="10" />
-                            <circle cx="60" cy="60" r="50" fill="none" stroke="var(--sand)" stroke-width="10"
-                                stroke-dasharray="292 22" stroke-linecap="round" transform="rotate(-90 60 60)" />
-                            <text x="60" y="55" text-anchor="middle" fill="var(--cream)" font-family="Playfair Display"
-                                font-size="20" font-weight="800">93%</text>
-                            <text x="60" y="72" text-anchor="middle" fill="var(--text-muted)" font-family="Sarabun"
-                                font-size="10">ต่อปี</text>
-                        </svg>
-                    </div>
-                    <div>
-                        <h3>Return on Investment</h3>
-                        <p>อัตราผลตอบแทนจากการลงทุน</p>
-                        <div class="payback-formula">กำไร 3,354,000 / ลงทุน 3,600,000 × 100 ≈ <strong>93%</strong></div>
-                    </div>
-                </div>
-            </div>
+                เปรียบเทียบ Best Case (เต็มกำลัง) กับ Realistic (ค่อยๆ เติบโต + Working Capital)</p>
+            <div class="kpi-grid" id="kpiGrid"></div>
+            <div class="payback-grid reveal" id="paybackGrid"></div>
         </div>
     </section>
 
-    <!-- ============================== STRATEGY ============================== -->
-    <section id="strategy" class="fs-section">
-        <div class="section-container">
-            <div class="section-label reveal" style="justify-content:center">
-                <span>5</span> คุณค่าของ Lab
-            </div>
-            <h2 class="section-title reveal reveal-delay-1"
-                style="text-align:center;max-width:750px;margin:0 auto 1rem">
-                กลยุทธ์การนำเสนอ<br><span style="color:var(--sage)">คุณค่าของ Lab</span>
-            </h2>
-            <p class="section-desc reveal reveal-delay-2" style="text-align:center;max-width:650px;margin:0 auto 3rem">
-                เหตุผลเชิงกลยุทธ์ที่ Lab คือ Game-Changer ของ Phase 1
-            </p>
-
-            <div class="strategy-grid">
-                <!-- Strategy 1 -->
-                <div class="strategy-card reveal">
-                    <div class="strategy-number">01</div>
-                    <div class="strategy-icon">🔗</div>
-                    <h3>Vertical Integration</h3>
-                    <p>
-                        การมี Lab ของตัวเองทำให้เราคุม <strong>"ต้นทุน"</strong> และ <strong>"เวลา"</strong> ได้เอง
-                        ผลการตรวจที่รวดเร็วช่วยให้การตัดสินใจรักษาของแพทย์แม่นยำขึ้น
-                    </p>
-                    <div class="strategy-tag">ลดต้นทุน + เพิ่มความเร็ว</div>
-                </div>
-
-                <!-- Strategy 2 -->
-                <div class="strategy-card reveal reveal-delay-1">
-                    <div class="strategy-number">02</div>
-                    <div class="strategy-icon">📱</div>
-                    <h3>Data is Gold</h3>
-                    <p>
-                        ผล Lab คือหัวใจของแอปฯ <strong>Fitkub</strong> การส่งผลตรวจเข้ามือถือคนไข้ทันทีจะสร้าง
-                        <strong>"Wow Effect"</strong> และทำให้คนไข้ผูกพันกับศูนย์ของเรา
-                    </p>
-                    <div class="strategy-tag">สร้าง Engagement ระยะยาว</div>
-                </div>
-
-                <!-- Strategy 3 -->
-                <div class="strategy-card reveal reveal-delay-2">
-                    <div class="strategy-number">03</div>
-                    <div class="strategy-icon">🔄</div>
-                    <h3>Cross-Selling</h3>
-                    <p>
-                        เมื่อคนไข้มาตรวจ Lab แล้วพบค่าที่ผิดปกติ (เช่น น้ำตาลสูง, ฮอร์โมนต่ำ)
-                        เราสามารถส่งต่อไปยังบริการ <strong>กายภาพบำบัด</strong> หรือ <strong>Regenerative
-                            Program</strong> ได้ทันที
-                    </p>
-                    <div class="strategy-tag">เพิ่ม Revenue per Patient</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================== CLOSING ============================== -->
+    <!-- CLOSING -->
     <section class="closing" id="closing">
         <div class="section-container">
             <div class="section-label reveal" style="justify-content:center">บทสรุป</div>
-            <h2 class="section-title reveal reveal-delay-1" style="text-align:center">
-                <span style="color:var(--sage)">Lab คือ Game-Changer</span>
-            </h2>
-
-            <div class="closing-quote reveal reveal-delay-2">
-                การเพิ่มส่วนของ <strong style="color:var(--sage)">ห้องปฏิบัติการ (Lab)</strong> เข้าไปใน Phase 1
-                ถือเป็นกลยุทธ์ที่เฉียบคมมาก เพราะนอกจากจะช่วยเพิ่ม<strong
-                    style="color:var(--sand)">ความน่าเชื่อถือทางวิชาการ</strong> (Medical Credibility) แล้ว
-                ยังเป็นส่วนที่ทำ<strong style="color:var(--sage)">กำไร (Margin)</strong>
-                ได้สูง และช่วยให้คุณหมอทิมมีข้อมูล <strong style="color:var(--cream)">"Data"</strong> สำหรับแอปฯ Fitkub
-                ได้อย่างรวดเร็วโดยไม่ต้องรอผลจากที่อื่น
-            </div>
-
-            <div class="closing-stats reveal reveal-delay-3">
-                <div class="cs-item">
-                    <div class="cs-value" style="color:var(--sage)">279K</div>
-                    <div class="cs-label">กำไร/เดือน</div>
-                </div>
-                <div class="cs-item">
-                    <div class="cs-value" style="color:var(--sand)">1.07 ปี</div>
-                    <div class="cs-label">คืนทุน</div>
-                </div>
-                <div class="cs-item">
-                    <div class="cs-value" style="color:var(--cream)">93%</div>
-                    <div class="cs-label">ROI ต่อปี</div>
-                </div>
-            </div>
-
+            <h2 class="section-title reveal reveal-delay-1" style="text-align:center"><span
+                    style="color:var(--sage)">สรุปผลการวิเคราะห์</span></h2>
+            <div class="closing-stats reveal reveal-delay-2" id="closingStats"></div>
             <div class="reveal" style="margin-top:3rem;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
                 <a href="index.html" class="btn-primary"
-                    style="font-size:1rem;padding:1rem 2.5rem;text-decoration:none">
-                    ← กลับหน้าหลัก
-                </a>
+                    style="font-size:1rem;padding:1rem 2.5rem;text-decoration:none">← กลับหน้าหลัก</a>
                 <button class="btn-outline" style="font-size:1rem;padding:1rem 2.5rem"
-                    onclick="window.scrollTo({top:0,behavior:'smooth'})">
-                    ↑ กลับด้านบน
-                </button>
+                    onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ กลับด้านบน</button>
             </div>
             <div class="signature reveal">— Regenerative Wellness Oasis —</div>
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer>
-        <p>© 2026 Regenerative Wellness Oasis — Napa, Chonburi | Financial Feasibility Study — Confidential</p>
+        <p>© 2026 Regenerative Wellness Oasis — Napa, Chonburi | Interactive Financial Feasibility Study</p>
     </footer>
 
     <script>
-        // Loader
-        window.addEventListener('load', () => {
-            setTimeout(() => document.getElementById('loader').classList.add('hidden'), 600);
-        });
-
-        // Nav scroll effect
-        window.addEventListener('scroll', () => {
-            document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 50);
-        });
-
-        // Scroll reveal
-        const revealEls = document.querySelectorAll('.reveal');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(e => {
-                if (e.isIntersecting) {
-                    e.target.classList.add('active');
-                    observer.unobserve(e.target);
-                }
-            });
-        }, { threshold: 0.15 });
-        revealEls.forEach(el => observer.observe(el));
-
-        // Particles
-        (function createParticles() {
-            const container = document.getElementById('particles');
-            for (let i = 0; i < 25; i++) {
-                const p = document.createElement('div');
-                p.className = 'particle';
-                p.style.left = Math.random() * 100 + '%';
-                p.style.animationDuration = (8 + Math.random() * 12) + 's';
-                p.style.animationDelay = Math.random() * 10 + 's';
-                p.style.width = p.style.height = (2 + Math.random() * 3) + 'px';
-                container.appendChild(p);
+        /* ===== MODULE DATA ===== */
+        const MODULES = {
+            clinic: {
+                name: 'คลินิกตรวจรักษา', nameEn: 'Clinic & OPD', icon: '🏥', required: true, color: '#A3A576',
+                desc: 'ตรวจรักษาทั่วไป, Regen Program, ขายยา (เงินสด + ประกันสังคม)',
+                capex: [
+                    { name: 'โครงสร้าง Container 1 ยูนิต', detail: 'ห้องตรวจ + ห้องรักษา', amount: 550000 },
+                    { name: 'อุปกรณ์การแพทย์ & Regen', detail: 'IV Therapy, Hormone Replacement', amount: 400000 },
+                    { name: 'ตกแต่งภายใน & เฟอร์นิเจอร์', detail: 'ระบบท่อน้ำ/ไฟ', amount: 150000 },
+                    { name: 'ระบบ IT & Fitkub', detail: 'ระบบนัดหมาย + เวชระเบียน', amount: 100000 },
+                ],
+                opex: [
+                    { name: 'ค่าตอบแทนแพทย์ (DF)', detail: 'ค่าวิชาชีพแพทย์', amount: 120000 },
+                    { name: 'พยาบาล/ผู้ช่วย', detail: '1 คน', amount: 30000 },
+                    { name: 'ค่ายาและเวชภัณฑ์', detail: 'เงินสด + ประกันสังคม', amount: 50000 },
+                    { name: 'ค่าสาธารณูปโภค & IT', detail: 'ไฟฟ้า, อินเทอร์เน็ต', amount: 8000 },
+                    { name: 'ค่าการตลาด', detail: 'โฆษณาออนไลน์', amount: 7000 },
+                    { name: 'ค่าเบ็ดเตล็ด', detail: 'ซ่อมบำรุงทั่วไป', amount: 5000 },
+                ],
+                revenue: [
+                    { name: 'Regen / Metabolic Package', cases: '10 เคส (โปรแกรมย้อนวัย)', price: 25000, amount: 250000 },
+                    { name: 'ตรวจรักษา + ขายยา (เงินสด)', cases: '80 เคส (3 เคส/วัน)', price: 800, amount: 64000 },
+                    { name: 'ตรวจรักษา + ขายยา (ประกันสังคม)', cases: '150 เคส (6 เคส/วัน)', price: 450, amount: 67500 },
+                ]
+            },
+            lab: {
+                name: 'ห้องปฏิบัติการ', nameEn: 'Diagnostic Lab', icon: '🔬', required: true, color: '#E9E4DD',
+                desc: 'ตรวจเลือด, วิเคราะห์สารเคมี, เชื่อมข้อมูลเข้า Fitkub',
+                capex: [
+                    { name: 'โครงสร้าง Container (Lab)', detail: 'ปรับโซนเป็นห้อง Lab', amount: 550000 },
+                    { name: 'อุปกรณ์ Lab & ตรวจเลือด', detail: 'เครื่องวิเคราะห์, centrifuge, ตู้แช่', amount: 500000 },
+                    { name: 'เคาน์เตอร์ Lab & ระบบท่อ', detail: 'มาตรฐานห้องปฏิบัติการ', amount: 200000 },
+                    { name: 'ระบบเชื่อมต่อ Lab-Fitkub', detail: 'ส่งผลตรวจเข้ามือถือทันที', amount: 150000 },
+                ],
+                opex: [
+                    { name: 'นักเทคนิคการแพทย์', detail: '1 คน', amount: 30000 },
+                    { name: 'น้ำยาตรวจวิเคราะห์', detail: 'Reagents & วัสดุสิ้นเปลือง', amount: 45000 },
+                    { name: 'ค่าไฟฟ้า (คุมอุณหภูมิ)', detail: 'Lab ต้องคุมอุณหภูมิ 24/7', amount: 7000 },
+                    { name: 'ค่ากำจัดขยะติดเชื้อ', detail: 'ตามมาตรฐานกรมอนามัย', amount: 5000 },
+                ],
+                revenue: [
+                    { name: 'Diagnostic Lab Services', cases: '40 เคส (ตรวจเลือด/สุขภาพ)', price: 2000, amount: 80000 },
+                ]
+            },
+            cafe: {
+                name: 'Healthy Cafe', nameEn: 'Cafe & Restaurant', icon: '☕', required: false, color: '#C4956A',
+                desc: 'ร้านอาหาร Low-carb, เครื่องดื่มสุขภาพ, Organic Market',
+                capex: [
+                    { name: 'อุปกรณ์ครัว & Menu Setup', detail: 'เครื่องปรุง, เตาอบ, ตู้เย็น', amount: 350000 },
+                    { name: 'ตกแต่ง Glass House', detail: 'โต๊ะ, เก้าอี้, เคาน์เตอร์', amount: 300000 },
+                    { name: 'Landscape & Outdoor', detail: 'ที่นั่งสวนกลางแจ้ง', amount: 150000 },
+                ],
+                opex: [
+                    { name: 'พ่อครัว + ผู้ช่วย', detail: '2 คน', amount: 45000 },
+                    { name: 'วัตถุดิบ & เครื่องดื่ม', detail: 'อาหาร Low-carb, Organic', amount: 30000 },
+                    { name: 'ค่าสาธารณูปโภค', detail: 'ไฟ, น้ำ, แก๊ส', amount: 10000 },
+                ],
+                revenue: [
+                    { name: 'Healthy Cafe & Restaurant', cases: '40 คน/วัน × 30 วัน', price: 150, amount: 180000 },
+                ]
+            },
+            rehab: {
+                name: 'กายภาพบำบัด', nameEn: 'Rehab & PT', icon: '🏋️', required: false, color: '#BFC1A0',
+                desc: 'Laser, Shockwave, ฟื้นฟูการเคลื่อนไหว',
+                capex: [
+                    { name: 'อุปกรณ์กายภาพบำบัด', detail: 'Laser, Shockwave, Exercise tools', amount: 800000 },
+                    { name: 'ห้อง Treatment & Exercise', detail: 'ปรับพื้นที่ + อุปกรณ์', amount: 200000 },
+                ],
+                opex: [
+                    { name: 'นักกายภาพบำบัด', detail: '1 คน', amount: 40000 },
+                    { name: 'วัสดุสิ้นเปลือง PT', detail: 'เจล, เทป, อุปกรณ์', amount: 15000 },
+                    { name: 'ค่าสาธารณูปโภค', detail: 'ไฟฟ้า', amount: 3000 },
+                    { name: 'ค่าการตลาด', detail: 'เน้นกลุ่มฟื้นฟูสมรรถภาพ', amount: 8000 },
+                    { name: 'ค่าเบ็ดเตล็ด', detail: 'ซ่อมบำรุงอุปกรณ์', amount: 4000 },
+                ],
+                revenue: [
+                    { name: 'กายภาพบำบัดเชิงฟื้นฟู (PT)', cases: '130 เคส (5 เคส/วัน)', price: 1500, amount: 195000 },
+                ]
+            },
+            spa: {
+                name: 'Medical Spa', nameEn: 'Spa & Hydrotherapy', icon: '💧', required: false, color: '#7B9BAB',
+                desc: 'สระวารีบำบัด, ห้องสปาผ่อนคลายกล้ามเนื้อ',
+                capex: [
+                    { name: 'อุปกรณ์ Medical Spa', detail: 'เครื่อง Treatment + เตียง Spa', amount: 400000 },
+                    { name: 'สระวารีบำบัด', detail: 'Hydrotherapy Pool', amount: 300000 },
+                    { name: 'ตกแต่งห้อง Spa', detail: 'บรรยากาศผ่อนคลาย', amount: 100000 },
+                ],
+                opex: [
+                    { name: 'นักบำบัด Spa', detail: '1 คน', amount: 35000 },
+                    { name: 'ผลิตภัณฑ์ & น้ำยา', detail: 'ครีม, น้ำมันหอมระเหย', amount: 15000 },
+                    { name: 'ค่าน้ำ/ไฟ (สระ)', detail: 'ระบบกรองน้ำ, ทำความร้อน', amount: 10000 },
+                ],
+                revenue: [
+                    { name: 'Medical Spa & Hydrotherapy', cases: '60 เคส/เดือน', price: 2500, amount: 150000 },
+                ]
+            },
+            nursing: {
+                name: 'Nursing Home', nameEn: 'Senior Care', icon: '🏨', required: false, color: '#DDBA94',
+                desc: 'ห้องพักผู้สูงอายุระดับหรู, Smart Room, พยาบาล 24/7',
+                capex: [
+                    { name: 'ห้องพัก Premium (4 ห้อง)', detail: 'Universal Design', amount: 2200000 },
+                    { name: 'Smart Room Monitoring', detail: 'IoT + ระบบแจ้งเตือน', amount: 400000 },
+                    { name: 'เตียงพยาบาล & เฟอร์นิเจอร์', detail: 'เตียง ICU, ตู้ข้างเตียง', amount: 500000 },
+                    { name: 'ศูนย์พยาบาล 24/7', detail: 'Nursing Station', amount: 400000 },
+                ],
+                opex: [
+                    { name: 'พยาบาลวิชาชีพ (3 กะ)', detail: 'ดูแล 24 ชั่วโมง', amount: 80000 },
+                    { name: 'ผู้ดูแล (Caregiver)', detail: '2 คน', amount: 40000 },
+                    { name: 'อาหาร & วัสดุ', detail: 'อาหาร 3 มื้อ + ของใช้', amount: 40000 },
+                    { name: 'ค่าสาธารณูปโภค', detail: 'ไฟ, น้ำ, Smart Room', amount: 20000 },
+                ],
+                revenue: [
+                    { name: 'Nursing Home Care (4 ห้อง)', cases: '4 ห้อง × เต็ม', price: 70000, amount: 280000 },
+                ]
             }
-        })();
+        };
 
-        // Animate bars on scroll
-        const barObserver = new IntersectionObserver((entries) => {
-            entries.forEach(e => {
-                if (e.isIntersecting) {
-                    e.target.querySelectorAll('.bar-fill').forEach((bar, i) => {
-                        setTimeout(() => {
-                            bar.style.width = bar.style.getPropertyValue('--bar-width');
-                        }, i * 120);
-                    });
-                    barObserver.unobserve(e.target);
-                }
-            });
-        }, { threshold: 0.3 });
-        document.querySelectorAll('.bar-chart').forEach(bc => barObserver.observe(bc));
+        /* ===== STATE ===== */
+        const selected = new Set(['clinic', 'lab', 'rehab']);
+        const prevValues = {};
 
-        // Counter animation for KPI values
-        function animateValue(el, start, end, duration) {
-            const range = end - start;
-            const startTime = performance.now();
-            function update(currentTime) {
-                const elapsed = currentTime - startTime;
-                const progress = Math.min(elapsed / duration, 1);
-                const eased = 1 - Math.pow(1 - progress, 3);
-                const current = Math.floor(start + range * eased);
-                el.textContent = current.toLocaleString();
-                if (progress < 1) requestAnimationFrame(update);
+        /* ===== RAMP-UP MODEL ===== */
+        // Month-by-month revenue capacity (% of full target)
+        const RAMP_UP = [0.30, 0.40, 0.50, 0.55, 0.60, 0.65, 0.70, 0.80, 0.85, 0.90, 0.95, 1.00];
+        const WC_MONTHS = 6; // Working capital buffer
+        const MONTH_LABELS = ['ม.ค.', 'ก.พ.', 'มี.ค.', 'เม.ย.', 'พ.ค.', 'มิ.ย.', 'ก.ค.', 'ส.ค.', 'ก.ย.', 'ต.ค.', 'พ.ย.', 'ธ.ค.'];
+
+        /* ===== HELPERS ===== */
+        const fmt = n => n.toLocaleString('en-US');
+        const fmtM = n => n >= 1000000 ? (n / 1000000).toFixed(1) : (n / 1000).toFixed(0) + 'K';
+        const sum = arr => arr.reduce((a, b) => a + b, 0);
+
+        function getMetrics() {
+            let capexTotal = 0, opexTotal = 0, revTotal = 0;
+            const capexByMod = [], opexByMod = [], revByMod = [];
+            const capexItems = [], opexItems = [], revItems = [];
+            for (const [id, mod] of Object.entries(MODULES)) {
+                if (!selected.has(id)) continue;
+                const cTotal = sum(mod.capex.map(i => i.amount));
+                const oTotal = sum(mod.opex.map(i => i.amount));
+                const rTotal = sum(mod.revenue.map(i => i.amount));
+                capexTotal += cTotal; opexTotal += oTotal; revTotal += rTotal;
+                capexByMod.push({ id, name: mod.name, color: mod.color, icon: mod.icon, total: cTotal });
+                opexByMod.push({ id, name: mod.name, color: mod.color, icon: mod.icon, total: oTotal });
+                revByMod.push({ id, name: mod.name, color: mod.color, icon: mod.icon, total: rTotal });
+                mod.capex.forEach(i => capexItems.push({ ...i, modId: id, modName: mod.name, modIcon: mod.icon, modColor: mod.color }));
+                mod.opex.forEach(i => opexItems.push({ ...i, modId: id, modName: mod.name, modIcon: mod.icon, modColor: mod.color }));
+                mod.revenue.forEach(i => revItems.push({ ...i, modId: id, modName: mod.name, modIcon: mod.icon, modColor: mod.color }));
             }
-            requestAnimationFrame(update);
+            const profitMo = revTotal - opexTotal;
+            const profitYr = profitMo * 12;
+            const bestPayback = profitYr > 0 ? capexTotal / profitYr : 99;
+            const bestRoi = capexTotal > 0 ? (profitYr / capexTotal) * 100 : 0;
+
+            // Working capital (6 months OPEX)
+            const workingCapital = opexTotal * WC_MONTHS;
+            const totalInvestment = capexTotal + workingCapital;
+
+            // Month-by-month cash flow (Year 1 with ramp-up)
+            const monthlyData = [];
+            let cumulativeCF = -totalInvestment;
+            let yr1TotalRev = 0, yr1TotalOpex = opexTotal * 12;
+            for (let i = 0; i < 12; i++) {
+                const moRev = Math.round(revTotal * RAMP_UP[i]);
+                const moProfit = moRev - opexTotal;
+                cumulativeCF += moProfit;
+                yr1TotalRev += moRev;
+                monthlyData.push({ month: i + 1, label: MONTH_LABELS[i], capacity: RAMP_UP[i], revenue: moRev, opex: opexTotal, profit: moProfit, cumulative: cumulativeCF });
+            }
+            const yr1Profit = yr1TotalRev - yr1TotalOpex;
+
+            // Realistic payback: Year 1 covered by ramp data, then full capacity from Year 2+
+            let remaining = totalInvestment - yr1Profit;
+            let realPayback;
+            if (yr1Profit >= totalInvestment) {
+                // Paid back within Year 1, find exact month
+                let cum = 0;
+                for (let i = 0; i < 12; i++) {
+                    cum += monthlyData[i].profit;
+                    if (cum >= totalInvestment) { realPayback = (i + 1) / 12; break; }
+                }
+                if (!realPayback) realPayback = 1;
+            } else if (profitMo > 0) {
+                realPayback = 1 + (remaining / (profitMo * 12));
+            } else {
+                realPayback = 99;
+            }
+            const realRoi = totalInvestment > 0 ? (profitYr / totalInvestment) * 100 : 0;
+
+            return {
+                capexTotal, opexTotal, revTotal, profitMo, profitYr,
+                bestPayback, bestRoi,
+                workingCapital, totalInvestment,
+                monthlyData, yr1TotalRev, yr1Profit,
+                realPayback, realRoi,
+                capexByMod, opexByMod, revByMod, capexItems, opexItems, revItems
+            };
         }
 
-        const kpiObserver = new IntersectionObserver((entries) => {
-            entries.forEach(e => {
-                if (e.isIntersecting) {
-                    const valueEl = e.target.querySelector('.kpi-value');
-                    if (valueEl) {
-                        const target = parseInt(valueEl.textContent.replace(/,/g, ''));
-                        if (!isNaN(target)) {
-                            animateValue(valueEl, 0, target, 1800);
-                        }
-                    }
-                    kpiObserver.unobserve(e.target);
-                }
-            });
-        }, { threshold: 0.5 });
-        document.querySelectorAll('.kpi-card').forEach(card => kpiObserver.observe(card));
+        function animNum(el, target, duration = 1200) {
+            const key = el.id || el.dataset.key;
+            const start = prevValues[key] ?? 0;
+            prevValues[key] = target;
+            if (start === target) { el.textContent = typeof target === 'number' && target % 1 !== 0 ? target.toFixed(2) : fmt(target); return; }
+            const range = target - start;
+            const t0 = performance.now();
+            const isFloat = typeof target === 'number' && (target % 1 !== 0 || Math.abs(target) < 100);
+            (function tick(now) {
+                const p = Math.min((now - t0) / duration, 1);
+                const e = 1 - Math.pow(1 - p, 3);
+                const v = start + range * e;
+                el.textContent = isFloat ? v.toFixed(v < 10 ? 2 : 1) : fmt(Math.round(v));
+                if (p < 1) requestAnimationFrame(tick);
+            })(performance.now());
+        }
 
-        // Animate exec strip numbers
-        const execObserver = new IntersectionObserver((entries) => {
-            entries.forEach(e => {
-                if (e.isIntersecting) {
-                    e.target.classList.add('counted');
-                    execObserver.unobserve(e.target);
-                }
+        /* ===== RENDERERS ===== */
+        function renderModuleSelector() {
+            const grid = document.getElementById('moduleGrid');
+            grid.innerHTML = Object.entries(MODULES).map(([id, mod]) => `
+    <label class="mod-card ${selected.has(id) ? 'active' : ''} ${mod.required ? 'required' : ''}" data-id="${id}" style="--mod-color:${mod.color}">
+      <input type="checkbox" ${selected.has(id) ? 'checked' : ''} ${mod.required ? 'disabled' : ''} data-module="${id}">
+      <div class="mod-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+      <span class="mod-badge">${mod.required ? 'จำเป็น' : 'เลือกได้'}</span>
+      <div class="mod-icon">${mod.icon}</div>
+      <div class="mod-name">${mod.name}</div>
+      <div class="mod-name-en">${mod.nameEn}</div>
+      <div class="mod-desc">${mod.desc}</div>
+      <div class="mod-capex">CAPEX ฿${fmt(sum(mod.capex.map(i => i.amount)))}</div>
+    </label>
+  `).join('');
+            grid.querySelectorAll('input[type=checkbox]').forEach(cb => {
+                cb.addEventListener('change', () => {
+                    const id = cb.dataset.module;
+                    cb.checked ? selected.add(id) : selected.delete(id);
+                    cb.closest('.mod-card').classList.toggle('active', cb.checked);
+                    update();
+                });
             });
-        }, { threshold: 0.5 });
-        document.querySelectorAll('.exec-stat').forEach(stat => execObserver.observe(stat));
+        }
+
+        function renderModuleSummary(m) {
+            document.getElementById('moduleSummary').innerHTML = `
+    <span>✓ เลือก <strong>${selected.size}</strong> จาก ${Object.keys(MODULES).length} โมดูล</span>
+    <span class="mod-sum-divider">|</span>
+    <span>CAPEX: <strong>฿${fmt(m.capexTotal)}</strong></span>
+    <span class="mod-sum-divider">|</span>
+    <span>OPEX: <strong>฿${fmt(m.opexTotal)}</strong>/เดือน</span>
+    <span class="mod-sum-divider">|</span>
+    <span>Revenue: <strong style="color:var(--sage)">฿${fmt(m.revTotal)}</strong>/เดือน</span>`;
+        }
+
+        function renderCapexTable(m) {
+            document.getElementById('capexTable').innerHTML = `
+    <thead><tr><th>รายการ</th><th>รายละเอียด</th><th class="num">งบประมาณ (บาท)</th></tr></thead>
+    <tbody>${m.capexItems.map(i => `
+      <tr><td><div class="item-with-icon"><span class="mod-dot" style="background:${i.modColor}"></span>
+        <span class="table-icon">${i.modIcon}</span>${i.name}</div></td>
+        <td>${i.detail}</td><td class="num">${fmt(i.amount)}</td></tr>`).join('')}
+      <tr style="border-top:2px dashed rgba(122,124,82,0.15)"><td><div class="item-with-icon"><span class="mod-dot" style="background:var(--sand)"></span>
+        <span class="table-icon">💰</span>เงินทุนหมุนเวียน (Working Capital)</div></td>
+        <td>OPEX × ${WC_MONTHS} เดือน (สำรองช่วง Ramp-up)</td><td class="num">${fmt(m.workingCapital)}</td></tr>
+    </tbody>
+    <tfoot><tr><td colspan="2">รวมเงินลงทุนทั้งหมด (CAPEX + Working Capital)</td><td class="num total">${fmt(m.totalInvestment)}</td></tr></tfoot>`;
+        }
+
+        function renderCapexDonut(m) {
+            const C = 2 * Math.PI * 80;
+            let offset = 0;
+            let svg = `<circle cx="100" cy="100" r="80" fill="none" stroke="rgba(163,165,118,0.06)" stroke-width="28"/>`;
+            m.capexByMod.forEach(mod => {
+                const len = (mod.total / m.capexTotal) * C;
+                svg += `<circle cx="100" cy="100" r="80" fill="none" stroke="${mod.color}" stroke-width="28"
+      stroke-dasharray="${len} ${C - len}" stroke-dashoffset="${-offset}" transform="rotate(-90 100 100)"
+      style="transition:all .8s ease"><title>${mod.name}: ฿${fmt(mod.total)}</title></circle>`;
+                offset += len;
+            });
+            svg += `<text x="100" y="94" text-anchor="middle" fill="var(--cream)" font-family="Playfair Display,serif" font-size="20" font-weight="800">${fmtM(m.capexTotal)}</text>`;
+            svg += `<text x="100" y="114" text-anchor="middle" fill="var(--text-muted)" font-family="Sarabun,sans-serif" font-size="10">บาท</text>`;
+            document.getElementById('capexDonut').innerHTML = svg;
+            document.getElementById('capexLegend').innerHTML = m.capexByMod.map(mod =>
+                `<div class="legend-item"><span class="legend-dot" style="background:${mod.color}"></span>${mod.name}<strong>${((mod.total / m.capexTotal) * 100).toFixed(1)}%</strong></div>`
+            ).join('');
+        }
+
+        function renderOpexTable(m) {
+            document.getElementById('opexTable').innerHTML = `
+    <thead><tr><th>รายการ</th><th>รายละเอียด</th><th class="num">งบประมาณ (บาท/เดือน)</th></tr></thead>
+    <tbody>${m.opexItems.map(i => `
+      <tr><td><div class="item-with-icon"><span class="mod-dot" style="background:${i.modColor}"></span>
+        <span class="table-icon">${i.modIcon}</span>${i.name}</div></td>
+        <td>${i.detail}</td><td class="num">${fmt(i.amount)}</td></tr>`).join('')}
+    </tbody>
+    <tfoot><tr><td colspan="2">รวมรายจ่ายรายเดือน</td><td class="num total">${fmt(m.opexTotal)}</td></tr></tfoot>`;
+        }
+
+        function renderOpexBars(m) {
+            const max = Math.max(...m.opexByMod.map(x => x.total));
+            document.getElementById('opexBars').innerHTML = m.opexByMod.map(mod => `
+    <div class="bar-row"><span class="bar-label">${mod.icon} ${mod.name}</span>
+      <div class="bar-track"><div class="bar-fill" style="--bar-width:${(mod.total / max * 100).toFixed(1)}%;--bar-color:${mod.color}" data-value="${fmt(mod.total)}"></div></div>
+    </div>`).join('');
+            setTimeout(() => document.querySelectorAll('#opexBars .bar-fill').forEach(b => b.style.width = b.style.getPropertyValue('--bar-width')), 50);
+        }
+
+        function renderRevenueTable(m) {
+            document.getElementById('revenueTable').innerHTML = `
+    <thead><tr><th>บริการ</th><th>ปริมาณ (เคส/เดือน)</th><th class="num">ราคาเฉลี่ย</th><th class="num">รวมรายได้</th></tr></thead>
+    <tbody>${m.revItems.map(i => `
+      <tr><td><div class="item-with-icon"><span class="mod-dot" style="background:${i.modColor}"></span>
+        <span class="table-icon">${i.modIcon}</span>${i.name}</div></td>
+        <td>${i.cases}</td><td class="num">${fmt(i.price)}</td><td class="num" style="color:${i.modColor};font-weight:700">${fmt(i.amount)}</td></tr>`).join('')}
+    </tbody>
+    <tfoot><tr><td colspan="3">รวมรายได้ต่อเดือน</td><td class="num total">${fmt(m.revTotal)}</td></tr></tfoot>`;
+        }
+
+        function renderRevenueBar(m) {
+            document.getElementById('revenueBar').innerHTML = m.revByMod.map(mod => {
+                const dark = ['#E9E4DD', '#BFC1A0', '#DDBA94', '#C4956A'].includes(mod.color);
+                return `<div class="rev-segment" style="flex:${mod.total};background:${mod.color};${dark ? 'color:var(--bg-dark)' : 'color:var(--cream)'}">
+      <span class="rev-seg-label">${mod.name}</span><span class="rev-seg-amount">${(mod.total / 1000).toFixed(0)}K</span></div>`;
+            }).join('');
+            document.getElementById('revTotalLabel').textContent = `รวม ฿${fmt(m.revTotal)} / เดือน`;
+        }
+
+        function renderKPIs(m) {
+            document.getElementById('kpiGrid').innerHTML = `
+    <div class="kpi-card reveal active"><div class="kpi-icon-wrap income"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+      <div class="kpi-value">${fmt(m.revTotal)}</div><div class="kpi-subtitle">รายได้เต็มกำลัง / เดือน</div><div class="kpi-trend up">Target</div></div>
+    <div class="kpi-card reveal active"><div class="kpi-icon-wrap expense"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/><polyline points="17 18 23 18 23 12"/></svg></div>
+      <div class="kpi-value">${fmt(m.opexTotal)}</div><div class="kpi-subtitle">รายจ่าย / เดือน</div><div class="kpi-trend neutral">OPEX</div></div>
+    <div class="kpi-card kpi-highlight reveal active"><div class="kpi-icon-wrap profit"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 100 4h4a2 2 0 110 4H8"/><path d="M12 18V6"/></svg></div>
+      <div class="kpi-value highlight-number">${fmt(m.profitMo)}</div><div class="kpi-subtitle">กำไร/เดือน (เต็มกำลัง)</div>
+      <div class="kpi-formula">${fmt(m.revTotal)} − ${fmt(m.opexTotal)} = <strong>${fmt(m.profitMo)}</strong></div></div>
+    <div class="kpi-card reveal active" style="border-left:3px solid var(--sand)"><div class="kpi-icon-wrap annual"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+      <div class="kpi-value">${fmt(m.yr1Profit)}</div><div class="kpi-subtitle">กำไรปีแรกจริง (Ramp-up)</div><div class="kpi-formula">รายได้ปีแรก ${fmt(m.yr1TotalRev)} − OPEX ${fmt(m.opexTotal * 12)}</div></div>`;
+        }
+
+        function renderPayback(m) {
+            const C = 2 * Math.PI * 50;
+            // Best case (ideal)
+            const pbBest = Math.min(m.bestPayback > 0 ? (1 / m.bestPayback) : 0, 1);
+            // Realistic
+            const pbReal = Math.min(m.realPayback > 0 ? (1 / m.realPayback) : 0, 1);
+            const roiPct = Math.min(m.realRoi / 100, 1);
+            document.getElementById('paybackGrid').innerHTML = `
+    <div class="payback-card" style="border-left:3px solid var(--sage)">
+      <div class="payback-visual">
+        <svg class="payback-ring" viewBox="0 0 120 120"><circle cx="60" cy="60" r="50" fill="none" stroke="rgba(163,165,118,0.08)" stroke-width="10"/>
+          <circle cx="60" cy="60" r="50" fill="none" stroke="var(--sage)" stroke-width="10" stroke-dasharray="${pbBest * C} ${C - pbBest * C}" stroke-linecap="round" transform="rotate(-90 60 60)" style="transition:all .8s ease"/>
+          <text x="60" y="55" text-anchor="middle" fill="var(--cream)" font-family="Playfair Display,serif" font-size="18" font-weight="800">${m.bestPayback.toFixed(2)}</text>
+          <text x="60" y="72" text-anchor="middle" fill="var(--text-muted)" font-family="Sarabun,sans-serif" font-size="10">ปี</text></svg>
+      </div><div><h3>⚡ Best Case</h3><p>เต็มกำลังตั้งแต่วันแรก (ไม่รวม WC)</p>
+        <div class="payback-formula">${fmt(m.capexTotal)} ÷ ${fmt(m.profitYr)} ≈ <strong>${m.bestPayback.toFixed(2)} ปี</strong></div></div>
+    </div>
+    <div class="payback-card" style="border-left:3px solid var(--sand)">
+      <div class="payback-visual">
+        <svg class="payback-ring" viewBox="0 0 120 120"><circle cx="60" cy="60" r="50" fill="none" stroke="rgba(221,186,148,0.08)" stroke-width="10"/>
+          <circle cx="60" cy="60" r="50" fill="none" stroke="var(--sand)" stroke-width="10" stroke-dasharray="${pbReal * C} ${C - pbReal * C}" stroke-linecap="round" transform="rotate(-90 60 60)" style="transition:all .8s ease"/>
+          <text x="60" y="55" text-anchor="middle" fill="var(--cream)" font-family="Playfair Display,serif" font-size="18" font-weight="800">${m.realPayback.toFixed(2)}</text>
+          <text x="60" y="72" text-anchor="middle" fill="var(--text-muted)" font-family="Sarabun,sans-serif" font-size="10">ปี</text></svg>
+      </div><div><h3>🎯 Realistic</h3><p>ค่อยๆ เติบโต + Working Capital ${WC_MONTHS} เดือน</p>
+        <div class="payback-formula">ลงทุนรวม ${fmt(m.totalInvestment)} | ROI <strong>${m.realRoi.toFixed(0)}%</strong></div></div>
+    </div>`;
+        }
+
+        function renderCashFlow(m) {
+            // Working Capital KPI cards
+            document.getElementById('wcCards').innerHTML = `
+    <div class="wc-card"><div class="wc-icon">🏗️</div><div class="wc-label">CAPEX</div><div class="wc-value">${fmtM(m.capexTotal)}</div></div>
+    <div class="wc-plus">+</div>
+    <div class="wc-card"><div class="wc-icon">💰</div><div class="wc-label">Working Capital (${WC_MONTHS} เดือน)</div><div class="wc-value">${fmtM(m.workingCapital)}</div></div>
+    <div class="wc-plus">=</div>
+    <div class="wc-card wc-total"><div class="wc-icon">📊</div><div class="wc-label">เงินลงทุนรวม</div><div class="wc-value">${fmtM(m.totalInvestment)}</div></div>`;
+
+            // Ramp-up bar chart
+            const maxRev = m.revTotal;
+            document.getElementById('rampupChart').innerHTML = `
+    <h3 class="chart-title">Revenue Ramp-up — เดือนที่ 1-12</h3>
+    <div class="rampup-bars">${m.monthlyData.map(d => {
+                const revH = (d.revenue / maxRev * 100).toFixed(1);
+                const isLoss = d.profit < 0;
+                return `<div class="rampup-col">
+        <div class="rampup-pct ${isLoss ? 'loss' : ''}">${isLoss ? '' : '+'}${fmt(d.profit)}</div>
+        <div class="rampup-bar-wrap"><div class="rampup-bar" style="height:${revH}%;background:${isLoss ? 'var(--sand)' : 'var(--sage)'}"></div></div>
+        <div class="rampup-label">${d.label}</div>
+        <div class="rampup-cap">${(d.capacity * 100).toFixed(0)}%</div>
+      </div>`;
+            }).join('')}
+    </div>`;
+
+            // Cash flow table
+            document.getElementById('cashflowTable').innerHTML = `
+    <thead><tr><th>เดือน</th><th class="num">กำลังผลิต</th><th class="num">รายได้</th><th class="num">OPEX</th><th class="num">กำไร/ขาดทุน</th></tr></thead>
+    <tbody>${m.monthlyData.map(d => `<tr>
+      <td><strong>${d.label}</strong> (เดือน ${d.month})</td>
+      <td class="num">${(d.capacity * 100).toFixed(0)}%</td>
+      <td class="num">${fmt(d.revenue)}</td>
+      <td class="num">${fmt(d.opex)}</td>
+      <td class="num" style="color:${d.profit < 0 ? '#C4956A' : 'var(--sage)'}; font-weight:700">${d.profit < 0 ? '' : '+'}${fmt(d.profit)}</td>
+    </tr>`).join('')}
+    </tbody>
+    <tfoot><tr><td>รวมปีแรก</td><td class="num">Avg ${(RAMP_UP.reduce((a, b) => a + b, 0) / 12 * 100).toFixed(0)}%</td>
+      <td class="num">${fmt(m.yr1TotalRev)}</td><td class="num">${fmt(m.opexTotal * 12)}</td>
+      <td class="num total" style="color:${m.yr1Profit < 0 ? '#C4956A' : 'var(--sage)'}">${m.yr1Profit < 0 ? '' : '+'}${fmt(m.yr1Profit)}</td></tr></tfoot>`;
+        }
+
+        function renderClosingStats(m) {
+            document.getElementById('closingStats').innerHTML = `
+    <div class="cs-item"><div class="cs-value" style="color:var(--sage)">${fmtM(m.totalInvestment)}</div><div class="cs-label">ลงทุนรวม</div></div>
+    <div class="cs-item"><div class="cs-value" style="color:var(--sand)">${m.realPayback.toFixed(1)} ปี</div><div class="cs-label">คืนทุน (Realistic)</div></div>
+    <div class="cs-item"><div class="cs-value" style="color:var(--cream)">${m.realRoi.toFixed(0)}%</div><div class="cs-label">ROI ต่อปี</div></div>`;
+        }
+
+        function renderExecStrip(m) {
+            const investM = m.totalInvestment / 1000000;
+            animNum(document.getElementById('ex-invest'), investM);
+            animNum(document.getElementById('ex-profit'), Math.round(m.profitMo / 1000));
+            animNum(document.getElementById('ex-payback'), parseFloat(m.realPayback.toFixed(1)));
+            animNum(document.getElementById('ex-roi'), Math.round(m.realRoi));
+        }
+
+        /* ===== MASTER UPDATE ===== */
+        function update() {
+            const m = getMetrics();
+            renderModuleSummary(m);
+            renderExecStrip(m);
+            renderCapexTable(m);
+            renderCapexDonut(m);
+            renderOpexTable(m);
+            renderOpexBars(m);
+            renderRevenueTable(m);
+            renderRevenueBar(m);
+            renderCashFlow(m);
+            renderKPIs(m);
+            renderPayback(m);
+            renderClosingStats(m);
+        }
+
+        /* ===== INIT ===== */
+        window.addEventListener('load', () => {
+            setTimeout(() => document.getElementById('loader').classList.add('hidden'), 600);
+            renderModuleSelector();
+            update();
+        });
+        window.addEventListener('scroll', () => document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 50));
+
+        // Scroll reveal
+        const ro = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('active'); ro.unobserve(e.target); } }), { threshold: 0.15 });
+        document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+
+        // Particles
+        (function () { const c = document.getElementById('particles'); for (let i = 0; i < 25; i++) { const p = document.createElement('div'); p.className = 'particle'; p.style.left = Math.random() * 100 + '%'; p.style.animationDuration = (8 + Math.random() * 12) + 's'; p.style.animationDelay = Math.random() * 10 + 's'; p.style.width = p.style.height = (2 + Math.random() * 3) + 'px'; c.appendChild(p); } })();
     </script>
 </body>
 
